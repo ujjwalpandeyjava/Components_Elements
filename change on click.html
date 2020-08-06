@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox function</title>
+</head>
+<style>
+    #classCheckbox {
+        width: 50%;
+        border: 2px dotted rgb(248, 154, 154);
+        float: left;
+        padding: 10px;
+    }
+
+    #changeIt {
+        clear: both;
+        width: 50%;
+        background-color: aqua;
+        border: 2px solid rgb(107, 235, 68, 1);
+        padding: 10px;
+    }
+</style>
+<script type="text/javaScript">
+function buttonClicked() {
+    if(document.getElementById("changeIt").style.backgroundColor!="red")
+    document.getElementById("changeIt").style.backgroundColor="red";
+    else if(document.getElementById("changeIt").style.backgroundColor="red")
+    document.getElementById("changeIt").style.backgroundColor="yellow";
+}
+function checkUnCheck(x, _this) {
+  if (_this.checked) {
+    document.getElementById(x).style.backgroundColor = 'blue';
+  } else  {
+    document.getElementById(x).style.backgroundColor = '#37b79dde';
+  }
+}
+</script>
+
+<body>
+    <div id="changeIt">
+        This div will change it's background colour on checkboxclick. and unclick.
+    </div>
+    <br><br>
+    <div id="classCheckbox">
+        Check it: <input type="checkbox" id="IDCheckbox" onchange="checkUnCheck('changeIt', this)">
+        <hr>
+        <button onclick="buttonClicked()">click me</button>
+    </div>
+    <br><br>
+</body>
+
+</html>

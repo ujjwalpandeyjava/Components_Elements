@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poloroid image cards</title>
+</head>
+<style>
+    img {
+        width: 70%;
+        height: auto;
+
+    }
+div:hover, .grid-item{
+    border: 1px dotted black;
+}
+    .grid-conatiner {
+        display: grid;
+        grid-template-columns: auto auto;
+        margin: 10px;
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+        padding: 4px;
+        border: 3px solid blue;
+        /* background-color: rgba(198, 198, 228, 0.87); */
+    }
+
+    .grid-item {
+        text-align: center;
+        padding: 10px;
+        justify-content: center;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border: 2px solid black;
+    }
+
+    .grid-item div {
+        border: 1px solid red;
+        padding: 20px 10px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .grid-conatiner img {
+        border: 1px solid rgb(230, 128, 240);
+    }
+
+    .grid-conatiner div {
+        border: 1px solid rgb(76, 241, 219);
+    }
+
+    .item {
+        border: 1px solid black;
+        width: 300px;
+        text-align: center;
+        margin: auto;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .item div {
+        padding: 20px 10px;
+        text-align: center;
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <marquee behavior="" direction="right"><h3>From here the content is poloroid/card view image with grid view of CSS3.</h3></marquee>
+    <div class="grid-conatiner">
+        <div class=" grid-item ">
+            <img src="Photos/desert.jpg" alt="">
+            <div>Enter description here</div>
+        </div>
+        <div class="grid-item ">
+            <img src="Photos/camel.jpg" alt="">
+            <div>Enter description here</div>
+        </div>
+        <div class=" grid-item ">
+            <img src="Photos/desert.jpg" alt="">
+            <div>Enter description here</div>
+        </div>
+        <div class="grid-item ">
+            <img src="Photos/camel.jpg" alt="">
+            <div>Enter description here</div>
+        </div>
+    </div>
+    <marquee behavior="" direction=""><h3>From here the content is only a single poloroid/card view image.</h3></marquee>
+    <div class="item">
+        <img src="Photos/camel.jpg" alt="">
+        <div>
+            enter the conternt of will.
+        </div>
+    </div>
+</body>
+
+</html>

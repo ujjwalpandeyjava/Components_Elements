@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+    <title>Digital clock</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #10101E;
+    } */
+    /* These two are same with different displays */
+    html,
+    body {
+        display: grid;
+        height: 100%;
+        place-items: center;
+        background: #10101E;
+    }
+
+    .datetime,
+    #poss {
+        margin: 10px;
+        padding: 14px 30px;
+        color: white;
+        background: #10101E;
+        border: 2px solid #2e4cf8;
+        border-radius: 5px;
+        font-family: 'Rubik', sans-serif;
+        -webkit-box-reflect: below 4px linear-gradient(transparent, rgba(255, 255, 255, 0.17));
+        /* Reflection*/
+        transition: 0.5s;
+        transition-property: background, box-shadow;
+    }
+
+    .datetime:hover,
+    #poss:hover {
+        background: #2e4cf8;
+        box-shadow: 0 0 20px #2e4cf8;
+    }
+
+    .date {
+        /* font-size: 20px; */
+        font-size: 10px;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: 1.5px;
+    }
+
+    .time {
+        /* font-size: 60px; */
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .time span:not(:last-child) {
+        position: relative;
+        margin: 0 3px;
+    }
+
+    .date span {
+        position: relative;
+        margin: 1px 3px;
+    }
+
+    #period {
+        background-color: #2e4cf8;
+        margin: 4px;
+        padding: 1px 5px;
+        border-radius: 3px;
+    }
+
+    #poss {
+        font-size: 13px;
+        font-family: monospace, sans-serif;
+    }
+    #HideBtn{
+        text-align: center;
+        background: #10101E;
+        color: white;
+        border: none;
+        width: 120px;
+        margin: auto;
+    }
+    #HideBtn {
+        padding: 2px 4px;
+        background: #2e4cf8;
+        border-radius: 5px;
+    }
+    .span2{
+        color: #86868b;
+    }
+</style>
+
+<body onload="initClock()">
+    <!-- Digital clock strts -->
+    <div class="datetime">
+        <div class="date">
+            <span id="dayname">Day</span>,
+            <span id="month">Month</span>-<span id="daynum">00</span>-<span id="year">0000</span>
+        </div>
+        <div class="time">
+            <span id="hour">0</span>:<span id="minutes">0</span>:<span id="seconds">0</span>
+            <span id="period"> AM</span>
+        </div>
+    </div>
+    <!-- Digital clock ends -->
+    <div id="poss">
+       <span id="LocalNetDetails">local</span><br><span class="span2">&emsp;&emsp; Local details with net.</span><br>
+       <span id="LocalNoNet">local</span><br><span class="span2">&emsp;&emsp;Local details with phn sync</span><br>
+       <span id="UTCtime">local</span><br><span class="span2">&emsp;&emsp;World standard time (UTC)</span><br>
+        <button id="HideBtn" onclick="hideSection()">Hide this section</button>
+    </div>
+</body>
+<script>
+
+    function updateClock() {
+        var now = new Date();
+        var dName = now.getDay();
+        mo = now.getMonth();
+        dNum = now.getDate();
+        yr = now.getFullYear();
+        hour = now.getHours();
+        min = now.getMinutes();
+        sec = now.getSeconds();
+        pe = "AM";
+        a = now.toString();
+        b = now.toLocaleString();
+        c = now.toUTCString();
+        if (hour == 0) {
+            hour = 12;
+        }
+        if (hour > 12) {
+            hour = hour - 12;
+            pe = "PM"
+        }
+
+        Number.prototype.pad = function (digits) {
+            for (var n = this.toString(); n.length < digits; n = 0 + n);
+            return n;
+        }
+
+        var months = ["January", "Feburary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var IDsFromBody = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds", "period", "LocalNetDetails", "LocalNoNet", "UTCtime"];
+        var IDsValues = [week[dName], months[mo], dNum.pad(2), yr, hour.pad(2), min.pad(2), sec.pad(2), pe, a, b, c];
+        for (var i = 0; i < IDsFromBody.length; i++)
+            document.getElementById(IDsFromBody[i]).firstChild.nodeValue = IDsValues[i];
+    }
+    function initClock() {
+        updateClock();
+        window.setInterval("updateClock()", 1);
+        /*Showing in the console*/
+        var allDateFormats = new Date();
+        console.log("local time with net and all details:-" + allDateFormats.toString());
+        console.log("local time without net (from your system):-" + allDateFormats.toLocaleString());
+        console.log("UTC date and time:-" + allDateFormats.toUTCString());
+    }
+    function hideSection(){
+        document.getElementById("poss").style.display='none';
+    }
+</script>
+
+</html>

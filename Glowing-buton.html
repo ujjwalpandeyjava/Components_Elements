@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowing button</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        display: grid;
+        height: 100%;
+        place-items: center;
+        background: #131111;
+    }
+
+    .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .outer {
+        position: relative;
+        margin: 0px 50px;
+        /* background: linear-gradient(#00f8df, #ffea2e, #ff0bde); */
+        background: #131111;
+    }
+
+    .button {
+        height: 80px;
+        width: 200px;
+        border-radius: 50px;
+    }
+
+    .circle {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+    }
+
+    .outer button,
+    .outer span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .outer button {
+        background: #000;
+        color: white;
+        font-size: 22px;
+        border: none;
+        outline: none;
+        text-transform: uppercase;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .button button {
+        height: 70px;
+        width: 190px;
+        border-radius: 50px;
+    }
+
+    .circle button {
+        height: 185px;
+        width: 185px;
+        border-radius: 50%;
+    }
+
+    .outer span {
+        height: 100%;
+        width: 100%;
+        background: inherit;
+    }
+
+    .button span {
+        border-radius: 50px;
+    }
+
+    .circle span {
+        border-radius: 50%;
+    }
+
+    .outer:hover .span1 {
+        filter: blur(7px);
+    }
+
+    .outer:hover .span2 {
+        filter: blur(14px);
+
+    }
+
+    @media (max-width: 650px) {
+        .center {
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        .outer {
+            margin: 50px 0px;
+        }
+    }
+
+    .outer:hover {
+        background: linear-gradient(#00f8df, #ffea2e, #ff0bde);
+        animation: rotate linear infinite 1.5s;
+    }
+
+    @keyframes rotate {
+        0% {
+            filter: hue-rotate(0deg);
+        }
+
+        100% {
+            filter: hue-rotate(360deg);
+        }
+    }
+
+    #paraName {
+        text-shadow: 3px 3px 4px #e4d9d999;
+    }
+</style>
+
+<body>
+    <div class="center">
+        <div class="outer button">
+            <button>Hover me</button>
+            <span class="span1"></span>
+            <span class="span2"></span>
+        </div>
+        <p id="paraName" style="color: white;">Ujjwal pandey</p>
+        <div class="outer circle">
+            <button>Hover me</button>
+            <span class="span1"></span>
+            <span class="span2"></span>
+        </div>
+    </div>
+</body>
+
+</html>

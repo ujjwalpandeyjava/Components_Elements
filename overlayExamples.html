@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overlay</title>
+</head>
+<style>
+    body{
+        background-color: rgb(209, 246, 246);
+    }
+    .main {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        column-gap: 5px;
+    }
+
+    .container {
+        position: relative;
+        /* max-height: 200px; */
+        /* width: 100%; */
+        height: auto;
+        margin: 20px auto;
+        box-shadow: 4px 5px 9px 1px #8ed9e0;
+
+    }
+
+    img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 250px;
+        display: block;
+    }
+
+     #example-1 {
+        position: absolute;
+        left: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        height: 100%;
+        width: 100%;
+        background-color: aqua;
+        font-size: xx-large;
+        opacity: 0;
+        transition: .5s ease-in-out;
+    }
+
+    .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /*Brings the center of contet at the specified location*/
+    }
+
+    .container:hover #example-1 {
+        opacity: 1;
+    }
+
+    #example-2 {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        background-color: #008CBA;
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: .5s ease;
+    }
+
+    .container:hover #example-2 {
+        bottom: 0;
+        height: 100%;
+    }
+
+    #example-3 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #008CBA;
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: .5s ease;
+    }
+
+    .container:hover #example-3 {
+
+        height: 100%;
+    }
+
+    #example-4 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #008CBA;
+        overflow: hidden;
+        width: 0;
+        height: 100%;
+        transition: .5s ease;
+    }
+
+    .container:hover #example-4 {
+        width: 100%;
+    }
+
+    #example-5 {
+        position: absolute;
+        bottom: 0;
+        left: 100%;
+        right: 0;
+        background-color: #008CBA;
+        overflow: hidden;
+        width: 0;
+        height: 100%;
+        transition: .5s ease;
+    }
+
+    .container:hover #example-5 {
+        width: 100%;
+        left:0;
+    }
+    #example-6 {
+        position: absolute;
+        font-size: xx-large;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        /* background-color: #008CBA; */
+        background-color:none; 
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        transition: .5s ease;
+        opacity: 0;
+    }
+
+    .container:hover #example-6 {
+       opacity: 1;
+    }
+    .container:hover img{
+        opacity: .6;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <img src="Photos/avatar.png" alt="person">
+            <div class="overlay" id="example-1">
+                <div class="text">Details</div>
+            </div>
+        </div>
+        <div class="container">
+            <img src="Photos/camel.jpg" alt="person">
+            <div class="overlay" id="example-2">
+                <div class="text">Details</div>
+            </div>
+        </div>
+        <div class="container">
+            <img src="Photos/desert.jpg" alt="person">
+            <div class="overlay" id="example-3">
+                <div class="text">Details</div>
+            </div>
+        </div>
+        <div class="container">
+            <img src="Photos/avatar.png" alt="person">
+            <div class="overlay" id="example-4">
+                <div class="text">Details</div>
+            </div>
+        </div>
+        <div class="container">
+            <img src="Photos/camel.jpg" alt="person">
+            <div class="overlay" id="example-5">
+                <div class="text">Details</div>
+            </div>
+        </div>
+        <div class="container">
+            <img src="Photos/desert.jpg" alt="person">
+            <div class="overlay" id="example-6">
+                <div class="text" style="color: black; padding: 7px; background-color: rgb(204, 158, 98);">Details</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

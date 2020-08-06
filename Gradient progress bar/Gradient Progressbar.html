@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html:5>
+
+    <head>
+        <title>Progress bar by Ujjwal pandey</title>
+        <link rel="stylesheet" href="Gradient Progressbar.css">
+    </head>
+
+    <body>
+        <div id="progressbar"></div>
+        <div id="scrollpath"></div>
+        <section>
+            <h1 style="font-size:40px;">Scrollbar page</h1><br>
+                <h2>Oil - The World's Most Important Source of Energy</h2>
+               <p>Petroleum or oil is a thick, yellow to black liquid found in rock layers. It is made up of organic
+                material, formed millions of years ago from dead plants and animals. Deep in the ground pressure and
+                heat transformed them into oil. Crude oil is oil in its natural state. Many other products are made out
+                of petroleum. Every day our planet consumes about 90 million barrels of oil. Because oil needs millions
+                of years to develop we will run out of the energy, which we so much depend on.</p><br>
+                
+            <h2> History of oil</h2>
+                <p>Oil has been used in one form or another over thousands of years but it has become really important to
+                our economy in the last 2 centuries. It has been the most important source of energy since the end ofWorld 
+                War II.The first oil well was created in the middle of the 19th century in Pennsylvania. By 1870 oil production
+                had spread to other American states. During the latter part of the 19th century oil was also produced in
+                Canada and in European countries.
+                The automobile boom of the early 20th century led to a higher demand of oil. It played an important role
+                as the main fuel for tanks and planes in the two world wars.
+                By 1950 the United States had become the world’s largest oil producer. In the second part of the 20th
+                century Saudi Arabia and Russia produced even more than the USA.
+                Today more than 90 percent of all vehicles are powered by oil products. It is the most important source
+                of energy in our world. About 80% of the world’s oil reserves are located in the Middle East. Other
+                notable producers are Venezuela, Great Britain and Indonesia.
+                </p> <br>
+
+            <h2>What petroleum is made out of</h2>
+                <p>Crude oil consists mainly of hydrocarbons, a combination of hydrogenand carbon. Each deposit of
+                petroleum has a different combination of hydrocarbons, thus making it a thicker or thinner liquid. It
+                also has sulphur, nitrogen and other elements in it.
+                </p><br> 
+
+            <h2>How oil is produced</h2>
+                <p>Before oil can be extracted from the earth geologists first must examine the land and the rock layers
+                that lie underneath the surface. Up to about 30 years ago drilling for oil was a great risk. Geologists
+                could not guarantee that oil would be found where they presumed. Today modern exploration methods make
+                it possible to find oil with a 70% success rate.
+                Most of the world’s oil is produced by drilling into the crust of the earth. Crude oil is found together
+                with gas, which floats above the oil layer. Sometimes gas is extracted together with oil during the
+                drilling process, at other times it is simply burned off when it comes to the surface.</p><br>
+
+            <h2>Oil pumping station in Texas</h2>
+                <p> oil can be brought to the surface a drilling rig is set up. Oil is often buried deep down in rock
+                layers, so that drills must go down to a depth of 10000 meters and more. Offshore rigs operate on
+                platforms in the ocean. They drill for oil underneath the ocean floor.
+                After it is brought up to the surface crude oil is brought to refineries, where it is made into petrol
+                or gas, heating oil, kerosene, fuel for airplanes and plastic products. Other chemicals and fertilizers
+                are also made out of crude oil.
+                Not all oil is found in rock below the surface. Some lies trapped in oil sands, but production is still
+                expensive.</p><br>
+
+            <h2>Petroleum industry</h2>
+                <p> oil industry combines many different tasks. In addition to exploring new reserves, drilling and
+                refining oil, the industry must also bring oil products to the consumer. Giant supertankers transport
+                crude oil across the oceans all over the world. Pipelines bring oil over land from one part of a
+                continent to another.</p><br>
+
+            <h2>Price of oil</h2>
+               <p>The price of oil changes constantly, depending on how much is produced and consumed. Many factors can
+                influence the price of oil. Especially wars and conflicts in oil-producing countries can lead to a rise
+                in oil prices. The energy crisis of the 1970s, for example, led to a dramatic rise in oil prices and
+                threw the world’s economy into a deep recession. The Organization of Petroleum Exporting Countries
+                (OPEC) has had a great influence on production and the price of oil since the 1970s.</p><br> 
+
+            <h2> Oil consumption</h2>
+                <p> of the world’s oil is needed in the western world. The United States is the world’s largest oil
+                consumer. It uses up about a fifth of the daily oil production. Japan, the European Union and China are
+                other major consumers of oil.</p><br>
+
+            <h2>The world's oil reserves</h2>
+               <p>Environmental effects of oil production
+                Producing and consuming oil and oil products affects our environment in many ways.
+                It is a major cause of global warming because burning fuel releases carbon dioxide, thus causing the
+                greenhouse effect. Oil drilling is often damaging to the environment because chemicals are used to
+                separate oil from water.
+                In the past decades there have been a series of tanker accidents that have polluted the world’s oceans
+                and seas. The biggest disaster was the sinking of the Exxon Valdez off the coast of Alaska in 1989. In
+                2010 an oil spill in the Gulf of Mexico spread to coastal areas in the USA and Mexico and polluted
+                thousands of square kilometers of water.</p><br>
+           
+        </section>
+        <script>
+        let progress = document.getElementById("progressbar");
+        let totalHeight = document.body.scrollHeight-window.innerHeight;
+        window.onscroll = function(){
+            let progressHeight = (window.pageYOffset/totalHeight)*100;
+            progress.style.height = progressHeight + "%";
+        }
+        </script>
+    </body>
+    <footer>All ends here ~ <i>Footer</i></footer>
+</HTMl:5>
