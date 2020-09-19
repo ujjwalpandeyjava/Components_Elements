@@ -51,8 +51,8 @@ body {
   display: -ms-grid;
   display: grid;
   height: 100%;
-  -ms-grid-columns: 65% 35%;
-      grid-template-columns: 65% 35%;
+  -ms-grid-columns: minmax(63%, 292px) minmax(37%, 170px);
+      grid-template-columns: minmax(63%, 292px) minmax(37%, 170px);
   background: #555ceb;
 }
 
@@ -83,7 +83,6 @@ body {
 
 .owl-carousel .item {
   width: 100%;
-  height: 75%;
   max-height: 80%;
 }
 
@@ -126,18 +125,18 @@ form {
   margin-top: 5rem;
 }
 
-form h3,
-form h6 {
+form h2,
+form h5 {
   font-family: var(--Philosopher);
   padding: 0;
   margin: 0;
   padding-left: 3rem;
 }
 
-form h6 {
+form h5 {
   padding-left: 4rem;
   font-family: var(--Lobster);
-  color: #444444d2;
+  color: #3e3c3ce6;
 }
 
 form .form-group {
@@ -148,7 +147,32 @@ form .form-group {
   border-radius: 3rem;
 }
 
+::-webkit-input-placeholder {
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+
+::-ms-input-placeholder {
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+
 form .form-group .form-input {
+  color: black;
   padding: 0.5rem 1rem;
   background: transparent;
   border: none;
@@ -163,13 +187,14 @@ form input:focus {
 
 form .input-icon {
   display: inline;
-  right: 5%;
   color: var(--border-color);
 }
 
 form .btn-login {
   float: none;
-  padding: .8rem;
+  width: 60%;
+  min-width: 80px;
+  padding: 1rem;
   margin-left: 2rem;
 }
 
@@ -177,5 +202,31 @@ form .btn-login {
   font-family: var(--Lobster);
   padding: 0 1.4rem;
   margin-top: 13px;
+}
+
+.input-icons i {
+  position: absolute;
+  right: 5px;
+  padding: 5px;
+}
+
+.input-icons {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.icon {
+  padding: 10px;
+  min-width: 40px;
+}
+
+.xx input {
+  display: block;
+}
+
+@media screen and (max-width: 1185px) {
+  div .input-icon {
+    display: none;
+  }
 }
 /*# sourceMappingURL=Style.css.map */

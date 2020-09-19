@@ -40,12 +40,12 @@ body {
         .row {
             display: grid;
             height: 100%;
-            grid-template-columns: 65% 35%;
+            grid-template-columns: minmax(63%, 292px) minmax(37%, 170px);
+
             background: #555ceb;
             .col {
                 padding: 8px;
                 margin: 2px;
-                // border: 2px solid indigo;
                 color: var(--text-color);
             }
         }
@@ -71,7 +71,6 @@ body {
 .owl-carousel {
     .item {
         width: 100%;
-        height: 75%;
         max-height: 80%;
     }
     .login_img {
@@ -111,17 +110,17 @@ form {
     max-height: 300px;
     margin-top: 5rem;
 }
-form h3,
-form h6 {
+form h2,
+form h5 {
     font-family: var(--Philosopher);
     padding: 0;
     margin: 0;
     padding-left: 3rem;
 }
-form h6 {
+form h5 {
     padding-left: 4rem;
     font-family: var(--Lobster);
-    color: #444444d2;
+    color: #3e3c3ce6;
 }
 form .form-group {
     text-align: left;
@@ -130,7 +129,12 @@ form .form-group {
     margin-right: 2rem;
     border-radius: 3rem;
 }
+::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+}
 form .form-group .form-input {
+    color: black;
     padding: 0.5rem 1rem;
     background: transparent;
     border: none;
@@ -138,33 +142,58 @@ form .form-group .form-input {
     font-size: 1rem;
     overflow: hidden;
 }
-form{
+
+
+form {
     input:focus {
         outline: none;
     }
-    .input-icon{
-         display: inline;
-         right:5%;
-         color: var(--border-color);
+    .input-icon {
+        display: inline;
+        // right: 5%;
+        color: var(--border-color);
     }
-    .btn-login{
+    .btn-login {
         float: none;
-        padding: .8rem;
+        width: 60%;
+        min-width: 80px;
+        padding: 1rem;
         margin-left: 2rem;
     }
 }
-
-
-
-
-
-
-
-
-
 
 .follow {
     font-family: var(--Lobster);
     padding: 0 1.4rem;
     margin-top: 13px;
+}
+
+
+.input-icons i { 
+    position: absolute; 
+    right: 5px;
+    padding: 5px;
+} 
+  
+.input-icons { 
+    width: 100%; 
+    margin-bottom: 10px; 
+} 
+  
+.icon { 
+    padding: 10px; 
+    min-width: 40px; 
+} 
+.xx input{
+    display: block;
+}
+
+@media screen and (max-width: 1185px){
+    div .input-icon{
+        display: none;
+    }
+}
+@media screen and (max-width: 640px){
+    .row {
+    }
 }
