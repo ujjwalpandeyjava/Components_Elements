@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="FrameWorks/Bootstraps/bootstrap-4.0.0/css/bootstrap.min.css">
+    <script src="FrameWorks/jQuery/jquery-3.5.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>append prepend using jQuery</title>
+</head>
+<style>
+    body {
+        background-color: burlywood;
+        border: 2px solid blue;
+        height: 700px;
+    }
+
+    #putHere {
+        margin-top: 50px;
+    }
+    .cls{
+        background-color: cadetblue;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        $("body").on('click', function (event) {
+            var ass = "x is:- " + event.pageX + " and y is:- " + event.pageY +"."
+            // document.getElementById("putHere").append("<br><p>" +ass +"</p>")
+            var mat = document.createElement("p");  
+                mat.innerHTML= "Location are:-" +ass +".";
+            var txt1 = "<p>Text1.</p>";        	 // Create text with HTML
+            var txt2 = $("<p></p>").text("Text2."); // Create text with jQuery
+            var txt3 = document.createElement("p");
+                txt3.innerHTML = "Text3.";        		 // Create text with DOM
+            $("div.cls").append(txt1, txt2, txt3, mat);
+            $("body").preend(txt, txt2, txt3, mat);//can't perpend outside the body tag.
+            $("#putHere").prepend("<p><b> jlakdhflakhsdf </b></p>")
+
+            // alert(event.pageX +"-" +event.pageY)
+        });
+    });
+</script>
+
+<body bgcolor="yellow">
+    <div class="container-fluid cls" id="putHere">
+        ldf
+        <button>click me</button><br>
+    </div>
+</body>
+
+</html>
