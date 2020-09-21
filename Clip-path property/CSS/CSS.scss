@@ -1,0 +1,106 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background: rgb(199, 229, 240);
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-row: wrap;
+    justify-items: center;
+    align-items: center;
+    font-family: "Courier New", Courier, monospace;
+}
+.container1 {
+    width: 40%;
+    background-color: white;
+    border-radius: 10px;
+
+    .inner {
+        // border: 0.2px solid rgba(0, 0, 0, 0.12);
+        background-color: rgb(84, 173, 233);
+        padding: 1em;
+        border-radius: inherit;
+        width: 100%;
+        transition: clip-path 0.5s ease-in-out;
+        clip-path: circle(7.5% at 0% 0%);
+
+        h1 {
+            color: white;
+            margin: 0;
+        }
+        p {
+            color: white;
+            font-size: 0.9rem;
+        }
+    }
+    &:hover .inner {
+        clip-path: circle(75%);
+    }
+}
+.container2 {
+    .inner {
+        // border: 0.2px solid black;
+        background-color: rgb(84, 233, 213);
+        padding: 1em;
+        border-radius: 10px;
+        width: 350px; /*To control the location of eye. Use mediaQuery to make it responsive*/
+        clip-path: circle(7.5% at 90% 15%);
+        transition: all 0.5s ease-in-out;
+        cursor: pointer;
+        &:hover {
+            clip-path: circle(75%);
+            background-color: rgb(84, 173, 233);
+        }
+        h1 {
+            color: white;
+            margin: 0;
+        }
+        p {
+            color: white;
+            font-size: 0.9rem;
+        }
+        span {
+            float: right;
+            font-weight: bold;
+            color: white;
+            transition: opacity 0.5s ease;
+            position: relative;
+            margin: -5px 15px 0px 0px;
+        }
+        &:hover span {
+            opacity: 0;
+        }
+    }
+}
+
+.container3 {
+    width: 40%;
+    background-color: white;
+    border-radius: 10px;
+
+    .inner {
+        // border: 0.2px solid rgba(0, 0, 0, 0.12);
+        background-color: rgb(84, 173, 233);
+        padding: 1em;
+        border-radius: 10px;
+        width: 100%;
+        transition: clip-path 0.5s ease-in-out,background-color 1.1s ease-out ;
+        clip-path: inset(0% 0% 0% 100%);/*Hide at the right*/
+
+        h1 {
+            color: white;
+            margin: 0;
+        }
+        p {
+            color: white;
+            font-size: 0.9rem;
+        }
+    }
+    &:hover .inner {
+        clip-path: inset(0% 0% 0% 0%);/*Cover the parent container*/
+        background-color: rgb(84, 233, 213);
+    }
+}

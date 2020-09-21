@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Stye.css">
+    <title>Curve background and parallex</title>
+</head>
+<style>
+    .scrolldown {
+        position: absolute;
+        bottom: 45px;
+        left: 50%;
+        width: 40px;
+        height: 40px;
+        transform: translateY(-80px) translateX(50%) rotate(45deg);
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .scrolldown span {
+        position: absolute;
+        display: block;
+        width: 80%;
+        height: 80%;
+        border-bottom: 2px solid #000;
+        border-right: 2px solid #000;
+        animation: animate 1.5s ease-out infinite;
+        /* 
+        border-bottom: 2px solid rgba(0, 0, 0, 0.8);
+        border-right: 2px solid rgba(0, 0, 0, 0.8);
+        box-shadow: inset -3px -3px 2px 0px #888888, 4px 4px 4px 0px #888888; */
+
+    }
+
+    .scrolldown span:nth-child(1) {
+        transform: translate(-15px, -15px);
+    }
+
+    .scrolldown span:nth-child(2) {
+        transform: translate(0px, 0px);
+    }
+
+    .scrolldown span:nth-child(3) {
+        transform: translate(15px, 15px);
+    }
+
+    @keyframes animate {
+        0% {
+            top: -10px;
+            left: -10px;
+        }
+
+        100% {
+            top: 10px;
+            left: 10px;
+        }
+    }
+</style>
+
+<body>
+    <header class="center">
+        <div class="overlay center">
+            <h1>Curve background</h1>
+            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius tempora numquam fugit aliquid illum
+                placeat
+                optio earum ratione sed praesentium.</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, ea consequatur totam tempore tenetur
+                dolores
+                cumque sequi ipsam, maiores eaque neque quisquam voluptate sit molestias! Ipsa ea totam iste excepturi
+                quas
+                omnis magni, assumenda sed ex asperiores, laboriosam, corporis sequi.</p>
+            <button id="btnReadMore">Read more.</button>
+        </div>
+    </header>
+    <section class="newsection">
+        <div>
+            <h2 class="center" id="bodyHead">Body here</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, adipisci? Quam ducimus nihil
+                blanditiis voluptatibus deleniti expedita molestias doloribus culpa laborum aliquam ipsum aspernatur
+                temporibus harum hic ipsam ullam saepe recusandae, officia quia esse, modi obcaecati. Asperiores
+                necessitatibus itaque sunt optio consequuntur quod, ipsam maxime expedita doloremque dolorem animi
+                reprehenderit officiis, inventore quidem iusto natus repellendus. Doloribus quaerat molestiae quos!</p>
+        </div>
+    </section>
+    <section>
+
+        <div class="scrolldown" id="scrolldown">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </section>
+</body>
+<script>
+    // When the user scrolls down 20px from the top of the document, slide down the navbar
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            // document.getElementById("scrolldown").style.display = "none";
+            //or
+            document.getElementById("scrolldown").style.opacity = "" + document.body.scrollTop - (document.body.scrollTop / 50) + "";
+        } else {
+            // document.getElementById("scrolldown").style.display = "";
+            //or
+            document.getElementById("scrolldown").style.opacity = "1";
+        }
+    }
+</script>
+
+</html>
