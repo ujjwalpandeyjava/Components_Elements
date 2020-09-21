@@ -39,11 +39,12 @@ h2 {
 }
 span {
     font: 100 20px sans-serif;
-    border: solid black 2px;
+    border: solid white 2px;
     padding: 4px 8px;
     border-radius: 50%;
     cursor: pointer;
-    color: rgba(5, 3, 3, 0.699);
+    /* color: rgba(5, 3, 3, 0.699); */
+    color: white;
     position: absolute;
     right: 50px;
     top: 50px;
