@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.curved {
+    margin-top: 80px;
+    height: 60vh;
+    padding: 30px;
+    background: rgb(255, 145, 0);
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    h1 {
+        font-size: 3rem;
+        font-family: "Segoe UI", cursive, Tahoma, Geneva, Verdana, sans-serif;
+    }
+    p {
+        font-family: cursive;
+    }
+}

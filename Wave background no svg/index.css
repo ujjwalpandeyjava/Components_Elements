@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.curved {
+  margin-top: 80px;
+  height: 60vh;
+  padding: 30px;
+  background: #ff9100;
+  color: #fff;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.curved h1 {
+  font-size: 3rem;
+  font-family: "Segoe UI", cursive, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.curved p {
+  font-family: cursive;
+}
+/*# sourceMappingURL=index.css.map */

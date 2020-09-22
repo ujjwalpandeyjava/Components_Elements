@@ -1,0 +1,129 @@
+<sami>
+<head>
+<Title>Curved-Custom DIV Shape Tutorial - CSS & SVG_Full-HD</Title>
+<style type='text/css'><!--
+.en { Name:English; lang:en; SAMIType:CC; }
+--></style>
+</head>
+<body>
+<SYNC Start=0><P class='en'>hello and welcome to red stapler Channel
+in this tutorial will show you how to
+<SYNC Start=4020><P class='en'>&nbsp;
+<SYNC Start=4020><P class='en'>easily create custom shape div using SVG
+and CSS in just a few minutes ready
+<SYNC Start=9300><P class='en'>&nbsp;
+<SYNC Start=9300><P class='en'>let&#39;s check it out so first let&#39;s start
+with HTML structure I&#39;m going to create
+<SYNC Start=20640><P class='en'>&nbsp;
+<SYNC Start=20640><P class='en'>a div and assign a curved class to it
+then let&#39;s put some headline and text
+<SYNC Start=26279><P class='en'>&nbsp;
+<SYNC Start=26279><P class='en'>paragraph
+<SYNC Start=28789><P class='en'>&nbsp;
+<SYNC Start=33570><P class='en'>next to CSS I&#39;m going to set the
+background and text color and text
+<SYNC Start=38910><P class='en'>&nbsp;
+<SYNC Start=38910><P class='en'>alignment to Center
+<SYNC Start=41870><P class='en'>&nbsp;
+<SYNC Start=47440><P class='en'>then increase the font size and set font
+family for aesthetic
+<SYNC Start=54100><P class='en'>&nbsp;
+<SYNC Start=70430><P class='en'>here&#39;s our current div you will notice
+the space at the top because after h1
+<SYNC Start=74900><P class='en'>&nbsp;
+<SYNC Start=74900><P class='en'>margin we&#39;ll remove that later
+<SYNC Start=79060><P class='en'>&nbsp;
+<SYNC Start=80260><P class='en'>to create the shape of our div we will
+need to use SVG path there are many ways
+<SYNC Start=84910><P class='en'>&nbsp;
+<SYNC Start=84910><P class='en'>to do this can draw it in Illustrator
+and export it as code or you can use
+<SYNC Start=89560><P class='en'>&nbsp;
+<SYNC Start=89560><P class='en'>online generators for this tutorial we
+are going to use the latter there are
+<SYNC Start=93610><P class='en'>&nbsp;
+<SYNC Start=93610><P class='en'>many good generators out there but there
+are two that I like most first is SVG
+<SYNC Start=98380><P class='en'>&nbsp;
+<SYNC Start=98380><P class='en'>path builder by Anthony Dugois if you
+want to create a complex shape if this
+<SYNC Start=103210><P class='en'>&nbsp;
+<SYNC Start=103210><P class='en'>is the one for you you can easily add
+and edit each point and the result code
+<SYNC Start=107380><P class='en'>&nbsp;
+<SYNC Start=107380><P class='en'>will be right at the bottom
+<SYNC Start=110700><P class='en'>&nbsp;
+<SYNC Start=111310><P class='en'>another one is getwaves.io you
+can create wave shape easily using the
+<SYNC Start=116260><P class='en'>&nbsp;
+<SYNC Start=116260><P class='en'>random button you can also switch
+between curves and rectangles once you
+<SYNC Start=121090><P class='en'>&nbsp;
+<SYNC Start=121090><P class='en'>are ready click the export button and
+copy the code
+<SYNC Start=125940><P class='en'>&nbsp;
+<SYNC Start=129360><P class='en'>I&#39;m going to place it at the end of our
+div
+<SYNC Start=133670><P class='en'>&nbsp;
+<SYNC Start=134160><P class='en'>the view box property defines the size
+of the SVG since we are not going to set
+<SYNC Start=139740><P class='en'>&nbsp;
+<SYNC Start=139740><P class='en'>the width and height the SVG will scale
+to fit so we don&#39;t have to worry about
+<SYNC Start=143730><P class='en'>&nbsp;
+<SYNC Start=143730><P class='en'>this for now next is fill this is the
+color of our SVG shape we will change it
+<SYNC Start=149310><P class='en'>&nbsp;
+<SYNC Start=149310><P class='en'>later and the last one is the most
+important the d property defines the
+<SYNC Start=154200><P class='en'>&nbsp;
+<SYNC Start=154200><P class='en'>path of the SVG it should be noted that
+the code we copy from getwaves have the
+<SYNC Start=159000><P class='en'>&nbsp;
+<SYNC Start=159000><P class='en'>entire SVG structure while other
+generator is like previous one from
+<SYNC Start=162990><P class='en'>&nbsp;
+<SYNC Start=162990><P class='en'>Anthony only have the path and you have
+to write the SVG tag by yourself and
+<SYNC Start=167600><P class='en'>&nbsp;
+<SYNC Start=167600><P class='en'>here&#39;s our div you will see if we change
+the fill color of the SVG to white it
+<SYNC Start=173160><P class='en'>&nbsp;
+<SYNC Start=173160><P class='en'>will look like
+the div has been cut to that shape
+<SYNC Start=177800><P class='en'>&nbsp;
+<SYNC Start=182520><P class='en'>I will also set the SVG display to block
+to make sure it takes up the entire width
+<SYNC Start=186660><P class='en'>&nbsp;
+<SYNC Start=190530><P class='en'>also removed the headline top margin
+while adding the site for the paragraph
+<SYNC Start=197300><P class='en'>&nbsp;
+<SYNC Start=204430><P class='en'>looks good but there is problem you&#39;ll
+notice a very thin line still remain
+<SYNC Start=209200><P class='en'>&nbsp;
+<SYNC Start=209200><P class='en'>this happened in Firefox only but not in
+chrome we can fix that by reducing the
+<SYNC Start=213819><P class='en'>&nbsp;
+<SYNC Start=213819><P class='en'>viewbox height by one
+<SYNC Start=216989><P class='en'>&nbsp;
+<SYNC Start=220599><P class='en'>now we can use the same technique with
+the upper side of the div except this
+<SYNC Start=224739><P class='en'>&nbsp;
+<SYNC Start=224739><P class='en'>time we will change the SVG fill color
+to orange while change the defect round
+<SYNC Start=229959><P class='en'>&nbsp;
+<SYNC Start=229959><P class='en'>to white
+<SYNC Start=232469><P class='en'>&nbsp;
+<SYNC Start=256820><P class='en'>the good thing about using SVG is
+scale responsively to the window size
+<SYNC Start=264230><P class='en'>&nbsp;
+<SYNC Start=265250><P class='en'>and that&#39;s all for this tutorial if you
+like this video don&#39;t forget to
+<SYNC Start=268940><P class='en'>&nbsp;
+<SYNC Start=268940><P class='en'>subscribe for more dev tips and
+tutorials thanks watching see you next
+<SYNC Start=272600><P class='en'>&nbsp;
+<SYNC Start=272600><P class='en'>time bye
+<SYNC Start=275320><P class='en'>&nbsp;
+</body>
+</sami>
