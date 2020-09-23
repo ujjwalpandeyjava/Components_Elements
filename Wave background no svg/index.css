@@ -4,15 +4,16 @@
 }
 
 .curved {
-  margin-top: 80px;
-  height: 60vh;
-  padding: 30px;
+  min-height: 50vh;
   background: #ff9100;
   color: #fff;
   text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.curved .curvedContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,6 +21,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 2rem;
 }
 
 .curved h1 {
@@ -29,5 +31,20 @@
 
 .curved p {
   font-family: cursive;
+}
+
+.curved svg {
+  display: block;
+}
+
+.content {
+  margin: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.btn-search:hover {
+  background-color: var(--indigo);
+  outline: var(--purple);
 }
 /*# sourceMappingURL=index.css.map */
