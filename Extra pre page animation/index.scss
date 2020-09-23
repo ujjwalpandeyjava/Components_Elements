@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo&family=Lobster&family=Bilbo+Swash+Caps&display=swap");
+
+/*font-family: 'Heebo', sans-serif;
+font-family: 'Bilbo Swash Caps', cursive;
+font-family: 'Lobster', cursive;*/
+
+:root {
+    --heeb: "Heebo", sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+    font-family: "Heebo", sans-serif;
+    .landing {
+        min-height: 100vh;
+        background: url("./plouzane-1758197_1280.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 1rem 3rem;
+        color: white;
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .nav-links {
+                display: flex;
+                list-style: none;
+                li {
+                    padding-left: 10rem;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+#logo {
+    font-family: "Lobster", cursive;
+    font-weight: lighter;
+    font-size: 2rem;
+}
+.big-text {
+    position: absolute;
+    font-family: "Lobster", cursive;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    font-size: 3.5rem;
+    color: #263b4a;
+}
+
+.intro {
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .intro-text {
+        font-family: "Bilbo Swash Caps", cursive;
+        color: #6f6fe2;
+        font-size: 2rem;
+    }
+}
+.slider {
+    background: #3a81c4;//rgb(12, 41, 37)
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: translateY(100%);
+}
+.hide {
+    background-color: black;
+    overflow: hidden;
+    span {
+        transform: translateY(100%);
+        display: inline-block;
+    }
+}
