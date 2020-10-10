@@ -67,6 +67,10 @@ div > h4 {
     margin: 40px;
     padding: 40px;
 }
+.newsection p{
+    font-family: cursive;
+    font-weight: normal;
+}
 
 #bodyHead {
     margin-bottom: 20px;
