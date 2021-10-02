@@ -27,7 +27,6 @@ section::before,section::after{
 #progressbar{
     position: fixed;
     width: 10px;
-   
     top: 0px;
     right: 0px;
     background:linear-gradient(to top,#008aff,#00ffe7);
