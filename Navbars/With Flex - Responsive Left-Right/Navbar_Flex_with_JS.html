@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="Navbar_Flex_with_JS.css">
+	<script src="https://kit.fontawesome.com/57097ff76e.js" crossorigin="anonymous"></script>
+	<title>Flex Navbar with JS & CSS</title>
+</head>
+
+<body>
+	<nav class="navbar">
+		<div style="padding: 5px 0 2px;">
+			<a href="#"><img class="primary-icon" src="images_Used/pokeBall.png" alt="Logo "></a>
+		</div>
+		<div class="hamParent" id="hamParent">
+			<div class="hamLine"></div>
+			<div class="hamLine"></div>
+			<div class="hamLine"></div>
+		</div>
+		<ul class="nav-list" id="nav-list">
+			<li class="list-item"><a href="#">Home</a></li>
+			<li class="list-item"><a href="#">Pokemon</a></li>
+			<li class="list-item"><a href="#">About</a></li>
+			<li class="list-item"><a href="#">Support</a></li>
+			<li class="list-item"><a href="#">Contact</a></li>
+			<li class="list-item"><a href="#">Join</a></li>
+		</ul>
+	</nav>
+
+	<div class="mainBody">
+		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores quibusdam architecto unde magnam veniam illo
+		ad ipsa voluptatibus? Sed quisquam, commodi autem cupiditate aperiam exercitationem, nam aspernatur temporibus
+		explicabo debitis minima magni reiciendis.
+		<br>
+		<h3>
+			From here we will add the body to the app.
+		</h3>
+	</div>
+
+	<script>
+		var hamburber = document.getElementById("hamParent")
+		var navList = document.getElementById("nav-list")
+		hamburber.addEventListener('click', () => {
+			navList.classList.toggle('active');
+		})
+	</script>
+</body>
+
+</html>

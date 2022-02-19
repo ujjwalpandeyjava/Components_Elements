@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Hind+Siliguri&display=swap");
+
+/*
+font-family: 'Balsamiq Sans', cursive;
+font-family: 'Hind Siliguri', sans-serif;
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+hr {
+    margin: 30px 0;
+}
+
+.navbar {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 14px 0 #666666a6;
+    display: flex;
+    background-color: aliceblue;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    max-height: 90px;
+    overflow: visible;
+}
+#logo {
+    margin-left: 25px;
+    width: 45px;
+    min-width: 28px;
+}
+#logo > a > img,
+#logo > a {
+    width: 100%;
+    height: auto;
+}
+#list {
+    display: flex;
+    padding: 0 7px;
+    align-items: center;
+    justify-content: flex-end;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    overflow: auto;
+    min-width: 200px;
+}
+#list > li {
+    cursor: pointer;
+    list-style: none;
+    padding: 0px 7px;
+}
+#list > li > a {
+    word-break: keep-all;
+    text-decoration: none;
+    color: rgba(36, 36, 36, 0.89);
+    font-family: "Balsamiq Sans", cursive;
+    font-weight: bold;
+    text-shadow: 1.6px 0.6px 2px #fdebeb;
+    display: block;
+}
+@media (max-width: 600px) {
+    .navbar {
+        background-color: rebeccapurple;
+    }
+    #list > li > a {
+        color: #da4242a1;
+    }
+}
+@media (max-width: 450px) {
+    /* create an menu button and add all the buttons in it. */
+    .navbar {
+        flex-direction: column;
+    }
+}
+/*
+#list > li > a {
+    color: rgb(8, 8, 8);
+    padding: 7px 40px;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: "Hind", "Caveat Brush", "Courier New", Courier, monospace;
+}
+#list > li > a :hover {
+    color: black;
+    border-radius: 20px;
+    background-color: white;
+}
+
+#navbar::before {
+    content: "";
+    position: absolute;
+    background: url(images_Used/Mechanical_navbar_Ready.png);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.28;
+    top: 0px;
+    left: 0px;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-position: center;
+    background-size: cover;
+}
+ */
