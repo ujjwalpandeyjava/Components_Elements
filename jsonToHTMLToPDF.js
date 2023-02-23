@@ -1,4 +1,5 @@
 window.jsPDF = window.jspdf.jsPDF;
+
 // Convert HTML content to PDF
 function Convert_HTML_To_PDF() {
     let pdfName = "customPDF" + ".pdf";
