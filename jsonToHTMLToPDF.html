@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jsonToHTMLToPDF</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.js"></script>
+    <script src="jsonToHTMLToPDF.js"></script>
+</head>
+
+<style>
+    #FullAreaForPDF {
+        padding: 12px;
+    }
+
+    #FullAreaForPDF>div {
+        border: 10px dashed red;
+        background-color: yellow;
+        padding: 2px;
+    }
+</style>
+
+<body>
+    <input type="button" value="Convert_HTML_To_PDF" onclick="Convert_HTML_To_PDF()" />
+    <div id="FullAreaForPDF">
+        <div>
+            <hr>
+            <button>Button 1</button> <button>Button 2</button>
+            <br>
+            This is <u>"Json To HTML To PDF"</u> which can be show on the pdf we are downloading
+            <hr>
+            <div id="dvTable"></div>
+            <center><img src="ee.webp" style="width:80%; max-width: 250px;"></center>
+        </div>
+    </div>
+</body>
+
+</html>
