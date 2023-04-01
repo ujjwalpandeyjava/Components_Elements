@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jsonToCanvasToPDF</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="jsonToCanvasToPDF.js"></script>
+</head>
+
+<style>
+    #FullAreaForPDF {
+        padding: 12px;
+    }
+
+    #FullAreaForPDF>div {
+        border: 10px dashed red;
+        background-color: yellow;
+        padding: 2px;
+    }
+</style>
+
+<body>
+    <input type="button" value="Export" onclick="Export()" />
+    <div id="FullAreaForPDF">
+        <div>
+            <hr>
+            <button>Button 1</button> <button>Button 2</button>
+            <br>
+            This is html which can be show on the pdf we are downloading
+            <hr>
+            <div id="dvTable"></div>
+        </div>
+    </div>
+</body>
+
+</html>
