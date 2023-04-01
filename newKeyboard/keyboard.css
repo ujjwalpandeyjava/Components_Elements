@@ -1,0 +1,165 @@
+/* Used fonts imports */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap");
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Slab', serif;
+*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--capsBackgroundColor: #ffffff;
+	--capsBackgroungLight: #ffffffde;
+}
+#autoKeyboardWork {
+	z-index: 7;
+}
+#keyboard {
+	z-index: 8;
+	color: white;
+	display: block;
+	position: fixed;
+	/* pointer-events: none; */
+	/* left: 0; */
+	right: 0;
+	bottom: -400px;
+	padding-top: 10px;
+	width: 100vw;
+	min-height: 250px;
+	/* height: 45vh; */
+	overflow: hidden;
+	transition: bottom 0.45s cubic-bezier(0.1, 0.55, 0.67, 1.27);
+}
+#keyboard > #keyboardKeys {
+	background: #0f1120;
+	height: 100%;
+	width: 90%;
+	margin: 0 auto;
+	padding: 15px;
+	border: 0.5px solid #ffffff;
+	box-shadow: 0px 0px 15px rgba(245, 245, 226, 0.6), 0px 0px 7px #ffffff, inset 0px 4px 5px rgba(10, 31, 73, 0.85);
+	border-radius: 13px 13px 0px 0px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-evenly;
+}
+#keyboardKeys > keyRow {
+	margin: 2px 0;
+	min-width: 400px;
+	height: 45px;
+	padding: 0 15px;
+	border: none;
+	width: 100%;
+	display: flex;
+	align-content: center;
+	justify-content: space-evenly;
+	align-items: stretch;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	flex: 1;
+}
+#keyboardKeys > keyRow:nth-child(1) {
+	width: calc(100%);
+}
+#keyboardKeys > keyRow:nth-child(2) {
+	width: calc(100% - 50px);
+}
+#keyboardKeys > keyRow:nth-child(3) {
+	width: calc(100% - 90px);
+}
+#keyboardKeys > keyRow:nth-child(4) {
+	width: calc(100% - 50px);
+}
+#keyboardKeys > keyRow:nth-child(5) {
+	width: calc(100%);
+}
+.keyStyle i {
+	/* padding-top: 5px; */
+	/* font-size: 1.5em; */
+}
+.keyStyle {
+	border: 1px solid #cbe3cb30;
+	margin: 3px 5px;
+	/* line-height: 45px; */
+	font-size: x-large;
+	font-weight: bold;
+	background-color: #2e2e2e;
+	text-align: center;
+	overflow: hidden;
+	flex: 1;
+	cursor: pointer;
+	border-radius: 4px;
+	box-shadow: 0 0 2px #cdf0c91c, inset 0 0 2px #a296e230;
+}
+.keyStyle:hover,
+.keyStyle:focus {
+	opacity: 0.85;
+	text-shadow: -1px 1px 1.7px rgb(88 188 199 / 82%);
+	box-shadow: 0 0 2px #cdf0c91c, inset 0 0 2px #a296e230, -1px 1px 3.5px #979494;
+}
+.bigKey {
+	flex: 2;
+}
+.biggestKey {
+	flex: 5;
+}
+#keyboardKeys > keyRow:first-child > div {
+	border-radius: 10px;
+	box-shadow: inset 0 0 10px rgba(159, 159, 159, 0.25);
+}
+.specialBtn {
+	background-color: #585858;
+}
+#closeKeyboardBtn {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+}
+#closeKeyboardBtn > div {
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	height: 35px;
+	width: 45px;
+	border-radius: 13px;
+	background-color: #474744;
+	line-height: 35px;
+}
+#backspace > i {
+	pointer-events: none !important;
+}
+#key30 {
+	position: relative;
+}
+#key30::before {
+	content: "";
+	position: absolute;
+	height: 7px;
+	width: 7px;
+	border-radius: 50%;
+	top: 65%;
+	right: 10%;
+	background-color: var(--capsBackgroundColor);
+	box-shadow: inset 0 0 3px 0px #686060, 0 0 7px 0px var(--capsBackgroungLight);
+}
+#enterKey {
+	padding-top: 5px;
+}
+#enterKey > i {
+	/* padding-top: 15px; */
+	transform: rotate(90deg);
+}
+/* Additional div to give page a proper scrollable abality when the keyboard is usable. */
+#increasePgHeight {
+	height: 44vh;
+    background-color: transparent;
+	/* display: block; */
+	display: none;
+}
+@media all and (max-width: 900px) {
+	.keyStyle {
+		font-size: large;
+	}
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- <script src="resources/js/updateAnchor.js"></script> -->
+	<!-- <link rel="stylesheet" href="demo.css"> -->
+</head>
+<style>
+	.coverFullScreen {
+		display: grid;
+/*		display: none;*/
+		color: red;
+		font-size: large;
+		font-weight: bolder;
+		z-index: 15;
+		justify-content: center;
+		align-content: center;
+		height: 40vh;
+		width: 40vw;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background: orange;
+		border: 2px solid blue;
+		box-sizing: border-box;
+	}
+
+	.coverFullScreen::before {
+		content: '';
+		height: 200vh;
+		width: 200vw;
+		/*100vh will also work if the contet is in center of the page*/
+		position: fixed;
+		background: #8484846e;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50vw, -50vh);
+		pointer-events: initial;
+	}
+</style>
+
+<body>
+	We are adding our upgrading panel here, This panel will show all the details to our customer, (s)he would need.
+	<br>
+	<button onclick="console.log('Back Actions are working'); alert('Back Actions are working')">Check action working in
+		console and alert</button>
+	<div class="coverFullScreen">
+		<div>Text etc///</div>
+	</div>
+</body>
+
+</html>

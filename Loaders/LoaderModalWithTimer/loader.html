@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/loader.css">
+	<script src="js/loader.js"></script>
+	<title>Loaded loader</title>
+</head>
+
+<body>
+	<div id="noActionWaitingLoader">
+		<h4 id="NAWLMessage">Wait!!<br />Changing Network Type</h4>
+		<span id="NAWL"></span>
+	</div>
+	<button onclick="onNAWL('Wait!!<br/>Changing Network Type', true, 3);">Switch on Loader for 3 seconds</button>
+	<button onclick="onNAWL('Wait!!<br/>Changing Network Type', false, 3);">Switch on Loader without loader for 3 seconds</button>
+	<button onclick="xx();">Switch off</button>
+</body>
+
+</html>

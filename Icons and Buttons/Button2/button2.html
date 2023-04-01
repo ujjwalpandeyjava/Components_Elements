@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="button2.css">
+	<title>Button </title>
+</head>
+<style>
+
+</style>
+
+<body>
+	<div class="center">
+		<span style="color: white;">
+			Can add any number of switches<br /><br />
+		</span>
+
+		<div class="k-switch">
+			<div class="track"></div>
+			<div class="ball green"></div>
+			<div class="ball red"></div>
+		</div>
+
+		<div class="k-switch on">
+			<div class="track"></div>
+			<div class="ball green"></div>
+			<div class="ball red"></div>
+		</div>
+
+		<div class="k-switch on">
+			<div class="track"></div>
+			<div class="ball green"></div>
+			<div class="ball red"></div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(".k-switch").click(function () {
+			var self = $(this);
+			if (self.hasClass("on")) self.removeClass("on");
+			else self.addClass("on");
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pressed moving View Button</title>
+	<script></script>
+</head>
+<style>
+	#upgradeProcessStartedBtn {
+		font-size: 1rem;
+		text-align: center;
+		text-transform: uppercase;
+		word-spacing: 3px;
+		letter-spacing: 1px;
+		background-color: #FFFFFF;
+		color: #B00020;
+		border: 1px solid #B00020;
+		border-bottom: 3px solid rgb(133, 1, 1);
+		border-right: 3px solid rgb(133, 1, 1);
+		padding: 9px 10px 4px;
+		display: inline-block;
+		cursor: pointer;
+		transition: all 0.25s ease-out 0s;
+		outline: rgb(176, 0, 32) dashed 0px;
+		box-sizing: border-box;
+		box-shadow: rgb(195 119 133 / 72%) 1px 1px 3px 0px inset;
+		border-radius: 3px;
+		margin: 0;
+	}
+
+	#upgradeProcessStartedBtn:active {
+		margin-top: 4px;
+		background-color: #B00020;
+		color: wheat;
+
+	}
+</style>
+
+<body>
+	<br>
+	<button onclick="upgradeProcessStarted()" id="upgradeProcessStartedBtn">Start Upgrade Process</button>
+</body>
+
+</html>

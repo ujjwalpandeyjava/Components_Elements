@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	div.box {
+		padding: 40px;
+		height: 100px;
+		width: 300px;
+		background: rgb(142, 141, 141);
+		position: relative;
+		color: white;
+		border-radius: 20px;
+	}
+
+	div.box::before {
+		content: "";
+		position: absolute;
+		inset: -5px;
+		z-index: -1;
+		border-radius: 25px;
+		background: linear-gradient(45deg, #fbff00, #00fff3f5, #38ff00f5);
+	}
+</style>
+
+<body>
+	<div class="box">lol</div>
+</body>
+
+</html>

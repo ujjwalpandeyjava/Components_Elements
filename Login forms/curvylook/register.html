@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styleSheet/register.css">
+	<title>Register</title>
+</head>
+
+<body>
+	<!DOCTYPE html>
+	<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="stylesheets/register.css">
+		<title>Register</title>
+	</head>
+
+	<body onload="onLoadFunction()">
+		<div class="detailsRight" align="center">
+			<form align="center" action="RegisterServlet" method="get" id="RCMA_Admin">
+				<h1>Register</h1>
+				<p style="text-decoration: dotted underline;">RCMA Admin</p>
+				<p style="color: red; font-size: large;">
+				</p>
+				<br />
+				<div>
+					<label for="uName">User Name:<span class="impFill">*</span>
+					</label> <input type="text" name="uName" required="required" />
+				</div>
+				<br />
+				<div>
+					<label for="email">E-mail ID:<span class="impFill">*</span>
+					</label> <input type="email" name="email" required="required" />
+				</div>
+				<br />
+				<div>
+					<label for="pass">Password:<span class="impFill">*</span>
+					</label> <input type="password" name="pass" required="required" autocomplete="name" />
+				</div>
+				<br />
+				<div>
+					<input type="submit" />
+				</div>
+				<br /> <a style="float: right; color: #7b4f03; text-decoration: blink;" href="login.html">Login</a>
+			</form>
+		</div>
+		<script type="text/javascript" src="javaScript/register.js"></script>
+	</body>
+
+	</html>
+</body>
+
+</html>
