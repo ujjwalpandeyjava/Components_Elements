@@ -48,6 +48,14 @@ socket.on('connection', connection => {
 	connection.on('shareInGroup', (data) => {
 		console.log(data);
 		//	To share message to a group we have to maintain a database table with id of person in the group and share the details to them once they are online (on connection)
+		// let clients = socket.sockets.clients();
+		// let roomClients = socket.sockets.clients('room'); // all users from room `room`
+		let list = socket.sockets.sockets
+		// console.log(list);
+		list.forEach(element => {
+			// console.log(element.id);
+			element.emit("showStatusTyping1", { typingStatus1: false, messageReceived: true, message: data.message });
+		});
 	});
 	console.log(`Connected on: ${connection.id}`);
 });
