@@ -17,7 +17,11 @@ body {
 /*Variables*/
 :root {
   --primary-gradient: linear-gradient(to right, #4e4376, #2b5876);
-  --ptb-gradient: linear-gradient(to right, rgb(252, 70, 107), rgb(63, 94, 251));
+  --ptb-gradient: linear-gradient(
+  	to right,
+  	rgb(252, 70, 107),
+  	rgb(63, 94, 251)
+  );
   --text-color: #f7f9f9;
   --Lobster: "Lobster", cursive;
   --Philosopher: "Philosopher", sans-serif;
@@ -26,36 +30,24 @@ body {
 }
 
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin: 6px;
   height: 98%;
   max-height: 610px;
 }
-
 .container .panel {
   width: 75%;
   height: 85%;
-  -webkit-box-shadow: var(--primary-shadow);
-          box-shadow: var(--primary-shadow);
+  box-shadow: var(--primary-shadow);
 }
-
 .container .panel .row {
-  display: -ms-grid;
   display: grid;
   height: 100%;
-  -ms-grid-columns: minmax(63%, 292px) minmax(37%, 170px);
-      grid-template-columns: minmax(63%, 292px) minmax(37%, 170px);
+  grid-template-columns: minmax(63%, 292px) minmax(37%, 170px);
   background: #555ceb;
 }
-
 .container .panel .row .col {
   padding: 8px;
   margin: 2px;
@@ -68,14 +60,12 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
-
 .liquid h3 {
   text-align: left;
   padding: 0.03rem;
   color: whitesmoke;
   font-family: var(--Philosopher);
 }
-
 .liquid .name {
   margin-left: 25%;
   font-size: x-large;
@@ -85,7 +75,10 @@ body {
   width: 100%;
   max-height: 80%;
 }
-
+.owl-carousel .item img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .owl-carousel .login_img {
   position: relative;
   float: right;
@@ -103,8 +96,7 @@ body {
   background: #2b5876;
   color: whitesmoke;
   font-family: var(--Philosopher);
-  -webkit-box-shadow: var(--primary-shadow);
-          box-shadow: var(--primary-shadow);
+  box-shadow: var(--primary-shadow);
   cursor: pointer;
 }
 
@@ -136,7 +128,7 @@ form h5 {
 form h5 {
   padding-left: 4rem;
   font-family: var(--Lobster);
-  color: #3e3c3ce6;
+  color: rgba(62, 60, 60, 0.9019607843);
 }
 
 form .form-group {
@@ -147,28 +139,14 @@ form .form-group {
   border-radius: 3rem;
 }
 
-::-webkit-input-placeholder {
+::-moz-placeholder {
   color: white;
-  opacity: 1;
-  /* Firefox */
-}
-
-:-ms-input-placeholder {
-  color: white;
-  opacity: 1;
-  /* Firefox */
-}
-
-::-ms-input-placeholder {
-  color: white;
-  opacity: 1;
-  /* Firefox */
+  opacity: 1; /* Firefox */
 }
 
 ::placeholder {
   color: white;
-  opacity: 1;
-  /* Firefox */
+  opacity: 1; /* Firefox */
 }
 
 form .form-group .form-input {
@@ -184,12 +162,10 @@ form .form-group .form-input {
 form input:focus {
   outline: none;
 }
-
 form .input-icon {
   display: inline;
   color: var(--border-color);
 }
-
 form .btn-login {
   float: none;
   width: 60%;
@@ -228,5 +204,4 @@ form .btn-login {
   div .input-icon {
     display: none;
   }
-}
-/*# sourceMappingURL=Style.css.map */
+}/*# sourceMappingURL=Style.css.map */
