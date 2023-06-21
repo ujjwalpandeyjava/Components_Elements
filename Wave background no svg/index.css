@@ -5,34 +5,23 @@
 
 .curved {
   min-height: 50vh;
-  background: #ff9100;
+  background: rgb(255, 145, 0);
   color: #fff;
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .curved .curvedContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding: 2rem;
 }
-
 .curved h1 {
   font-size: 3rem;
   font-family: "Segoe UI", cursive, Tahoma, Geneva, Verdana, sans-serif;
 }
-
 .curved p {
   font-family: cursive;
 }
-
 .curved svg {
   display: block;
 }
@@ -46,5 +35,4 @@
 .btn-search:hover {
   background-color: var(--indigo);
   outline: var(--purple);
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

@@ -1,5 +1,5 @@
 body {
-  background-color: #2b2d39;
+  background-color: rgb(43, 45, 57);
 }
 
 .loader {
@@ -7,21 +7,16 @@ body {
   height: 156px;
   border-radius: 50%;
   position: relative;
-  -webkit-animation: rotateSpinner1 0.8s steps(12, end) infinite;
-          animation: rotateSpinner1 0.8s steps(12, end) infinite;
-  -webkit-transform: scale(0.2);
-          transform: scale(0.2);
+  animation: rotateSpinner1 0.8s steps(12, end) infinite;
+  transform: scale(0.2);
 }
-
 .loader .prong {
   position: absolute;
   height: 50%;
   width: 6px;
   left: calc(50% - 3px);
-  -webkit-transform-origin: bottom;
-          transform-origin: bottom;
+  transform-origin: bottom;
 }
-
 .loader .prong .inner {
   background: gray;
   border-radius: 12px;
@@ -30,140 +25,93 @@ body {
   top: 0;
   height: 50%;
 }
-
 .loader .prong:nth-of-type(1) {
   opacity: 0.08;
-  -webkit-transform: rotate(30deg);
-          transform: rotate(30deg);
+  transform: rotate(30deg);
 }
-
 .loader .prong:nth-of-type(2) {
   opacity: 0.16;
-  -webkit-transform: rotate(60deg);
-          transform: rotate(60deg);
+  transform: rotate(60deg);
 }
-
 .loader .prong:nth-of-type(3) {
   opacity: 0.24;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
-
 .loader .prong:nth-of-type(4) {
   opacity: 0.32;
-  -webkit-transform: rotate(120deg);
-          transform: rotate(120deg);
+  transform: rotate(120deg);
 }
-
 .loader .prong:nth-of-type(5) {
   opacity: 0.4;
-  -webkit-transform: rotate(150deg);
-          transform: rotate(150deg);
+  transform: rotate(150deg);
 }
-
 .loader .prong:nth-of-type(6) {
   opacity: 0.48;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
-
 .loader .prong:nth-of-type(7) {
   opacity: 0.56;
-  -webkit-transform: rotate(210deg);
-          transform: rotate(210deg);
+  transform: rotate(210deg);
 }
-
 .loader .prong:nth-of-type(8) {
   opacity: 0.64;
-  -webkit-transform: rotate(240deg);
-          transform: rotate(240deg);
+  transform: rotate(240deg);
 }
-
 .loader .prong:nth-of-type(9) {
   opacity: 0.72;
-  -webkit-transform: rotate(270deg);
-          transform: rotate(270deg);
+  transform: rotate(270deg);
 }
-
 .loader .prong:nth-of-type(10) {
   opacity: 0.8;
-  -webkit-transform: rotate(300deg);
-          transform: rotate(300deg);
+  transform: rotate(300deg);
 }
-
 .loader .prong:nth-of-type(11) {
   opacity: 0.88;
-  -webkit-transform: rotate(330deg);
-          transform: rotate(330deg);
+  transform: rotate(330deg);
 }
-
 .loader .prong:nth-of-type(12) {
   opacity: 0.96;
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+  transform: rotate(360deg);
 }
-
 .loader-xs {
   width: 22px;
   height: 22px;
 }
-
 .loader-xs .prong {
   width: 2px;
   left: calc(50% - 1px);
 }
-
 .loader-sm {
   width: 26px;
   height: 26px;
 }
-
 .loader-sm .prong {
   width: 2px;
   left: calc(50% - 1px);
 }
-
 .loader-md {
   width: 32px;
   height: 32px;
 }
-
 .loader-md .prong {
   width: 2px;
   left: calc(50% - 1px);
 }
-
 .loader-white .prong .inner {
   background-color: white;
 }
 
-@-webkit-keyframes rotateSpinner1 {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
 @keyframes rotateSpinner1 {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 .MuiSkeleton-root {
   background-color: wheat !important;
 }
-
 .MuiSkeleton-root::after {
   background: wheat !important;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

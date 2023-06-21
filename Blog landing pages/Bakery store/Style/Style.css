@@ -1,92 +1,68 @@
 * {
   margin: 0px;
   padding: 0px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .container {
-  display: -ms-grid;
   display: grid;
   padding: 15px;
   grid-gap: 1rem;
-      grid-template-areas: "navbar navbar navbar navbar" "section section section  aside1" "section section section  aside2" "footer footer footer footer";
+  grid-template-areas: "navbar navbar navbar navbar" "section section section  aside1" "section section section  aside2" "footer footer footer footer";
   /*  &::before {
-        content: "";
-        position: absolute;
-        background: url(../pics/bg-bakery-4.jpeg) no-repeat center center/cover;
-        height: 100vh;
-        width: 100%;
-        z-index: -1;
-        opacity: 0.7;
-        top: 0px;
-        left: 0px;
-    } */
+       content: "";
+       position: absolute;
+       background: url(../pics/bg-bakery-4.jpeg) no-repeat center center/cover;
+       height: 100vh;
+       width: 100%;
+       z-index: -1;
+       opacity: 0.7;
+       top: 0px;
+       left: 0px;
+   } */
 }
 
 /*Navbar*/
 #navbar {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
   grid-area: navbar;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   position: relative;
-  background-color: #9f9fb61c;
+  background-color: rgba(159, 159, 182, 0.1098039216);
 }
-
 #navbar #logo {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   padding: 4px 40px;
 }
-
 #navbar #logo img {
   width: 50px;
   height: auto;
 }
-
 #navbar #list {
   margin: 3px;
   cursor: pointer;
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   display: flex;
 }
-
 #navbar #list li {
   font-size: 1.2em;
   list-style: none;
 }
-
 #navbar #list li a {
   display: block;
-  color: #080808;
+  color: rgb(8, 8, 8);
   padding: 7px 40px;
   text-decoration: none;
   font-family: "Hind", "Caveat Brush", "Courier New", Courier, monospace;
 }
-
 #navbar #list li a:hover {
   color: black;
   border-radius: 20px;
   background-color: white;
 }
-
 #navbar::before {
   content: "";
   position: absolute;
@@ -100,75 +76,55 @@
 }
 
 #section {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: section;
-  display: -ms-grid;
   display: grid;
   grid-gap: 0.2em;
   padding: 5px;
-  background-color: #f1f4f840;
-  -ms-grid-columns: (minmax(160px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  background-color: rgba(241, 244, 248, 0.2509803922);
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 }
-
 #section .cakes {
   margin: 5px;
   padding: 5px;
-  background-color: #e4f0ee30;
+  background-color: rgba(228, 240, 238, 0.1882352941);
   border-radius: 5px;
 }
-
 #section .cakes img {
   width: 100%;
   height: auto;
 }
-
 #section .cakes p {
   padding: 5px 10px;
 }
 
 @media screen and (max-width: 575px) {
   #section {
-    -ms-grid-columns: (minmax(100px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
 }
-
 .boxCheck {
   padding: 10px;
 }
 
 /*Asides for ad and few details.*/
 #aside1 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 4;
   grid-area: aside1;
-  background-color: #faf4f4eb;
+  background-color: rgba(250, 244, 244, 0.9215686275);
   border-radius: 5px;
-  border: 1px solid #eaf3efad;
+  border: 1px solid rgba(234, 243, 239, 0.6784313725);
 }
-
 #aside2 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 4;
   grid-area: aside2;
-  background-color: #faf4f4eb;
+  background-color: rgba(250, 244, 244, 0.9215686275);
   border-radius: 5px;
-  border: 1px solid #eaf3efad;
+  border: 1px solid rgba(234, 243, 239, 0.6784313725);
 }
-
 /*Footer*/
 #footer {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
   grid-area: footer;
   border: 1px solid #e0f1bd;
   padding: 10px 23px;
-  background-color: #ebb23793;
+  background-color: rgba(235, 178, 55, 0.5764705882);
   border-radius: 4px;
   display: block;
 }
@@ -176,8 +132,5 @@
 /*Utilities*/
 .center {
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-/*# sourceMappingURL=Style.css.map */
+  justify-content: center;
+}/*# sourceMappingURL=Style.css.map */
