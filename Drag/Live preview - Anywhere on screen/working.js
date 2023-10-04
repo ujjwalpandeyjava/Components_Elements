@@ -1,5 +1,6 @@
 var container = document.querySelector("#container");
-var dragItem = document.querySelector("#item>.header");
+// var dragItem = document.querySelector("#item>.header");
+var dragItem = document.querySelector("#item");
 
 var active = false;
 var currentX;
@@ -15,19 +16,19 @@ var yOffset = 0;
 
 function dragStart(event) {
 	console.log(event.target.classList.contains("header"));
-	// if (event.target.classList.contains("header")) {
-	if (event.type === "touchstart") {
-		initialX = event.touches[0].clientX - xOffset;
-		initialY = event.touches[0].clientY - yOffset;
-	} else {
-		initialX = event.clientX - xOffset;
-		initialY = event.clientY - yOffset;
-	}
+	if (event.target.classList.contains("header")) {
+		if (event.type === "touchstart") {
+			initialX = event.touches[0].clientX - xOffset;
+			initialY = event.touches[0].clientY - yOffset;
+		} else {
+			initialX = event.clientX - xOffset;
+			initialY = event.clientY - yOffset;
+		}
 
-	if (event.target === dragItem) {
+		// if (event.target === dragItem) {
 		active = true;
+		// }
 	}
-	// }
 }
 
 function dragEnd() {
@@ -51,7 +52,7 @@ function drag(event) {
 
 		xOffset = currentX;
 		yOffset = currentY;
-		dragItem.parentElement.style.transform = "translate3d(" + currentX + "px, " + currentY + "px, 0)";
+		dragItem.style.transform = "translate3d(" + currentX + "px, " + currentY + "px, 0)";
 	}
 }
 function ses(params) {
