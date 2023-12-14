@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sign-Up</title>
+	<link rel="stylesheet" href="signUp.css">
+</head>
+
+<body>
+	<div class="formContainer">
+		<div class="formSupportImage">
+			<img src="./images/loginMobile.svg" alt="" srcset=""><br>
+			<a href="./signUp.html">New Here?</a>
+		</div>
+		<div class="form">
+			<div class="singUpText">Sign In</div>
+			<form onsubmit="callAPI()" method="post">
+				<p>
+					<i class="fa-solid fa-envelope"></i>
+					<input type="text" name="eMail" id="eMail" placeholder="Your e-mail">
+				</p>
+				<p>
+					<i class="fa-solid fa-lock"></i>
+					<input type="password" name="password" id="password" placeholder="Password">
+				</p>
+				<p>
+					<input type="checkbox" name="rememberMe" id="rememberMe">
+					<label for="rememberMe">Remember Me</label>
+				</p>
+				<p class="forgotPasswordPara">
+					<i class="fa-solid fa-dragon"></i>
+					<a href="#recoverPage">Recover password?</a>
+				</p>
+				<p>
+					<input type="submit" value="Login">
+				</p>
+			</form>
+			<div class="otherLoginOptions">
+				Or login with 
+				<a href="login/oAuth/google"><i class="fa-brands fa-google"></i></a>
+				<a href="login/oAuth/facebook"><i class="fa-brands fa-facebook-f"></i></a>
+				<a href="login/oAuth/twitter"><i class="fa-brands fa-x-twitter"></i></a>
+				<a href="login/oAuth/instagram"><i class="fa-brands fa-instagram"></i></a>
+			</div>
+		</div>
+	</div>
+	<script>
+		function callAPI(){
+			this.event.preventDefault();
+			alert("Form submitted");
+		}
+	</script>
+	<script src="https://kit.fontawesome.com/57097ff76e.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

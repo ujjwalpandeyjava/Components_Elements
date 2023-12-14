@@ -1,0 +1,54 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+}
+body {
+	background-color: #000;
+}
+
+.container {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+}
+.container span {
+	display: block;
+}
+.text1 {
+	text-transform: uppercase;
+	position: relative;
+	color: white;
+	font-size: 3rem;
+	font-weight: bold;
+	letter-spacing: 8px;
+	margin-bottom: 0px;
+	background-color: black;
+	animation: textAnimation 3s 10ms 1;
+}
+
+.text2 {
+	margin-bottom: -5rem;
+	top: 0;
+	font-size: 2rem;
+	color: aqua;
+}
+@keyframes textAnimation {
+	0% {
+		color: black;
+		margin-bottom: -3rem;
+	}
+	30% {
+		color: white;
+		letter-spacing: 25px;
+		margin-bottom: -3rem;
+	}
+	85% {
+		/* color: black; */
+		letter-spacing: 8px;
+		margin-bottom: -3rem;
+	}
+}

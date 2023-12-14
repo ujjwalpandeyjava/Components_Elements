@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sign-Up</title>
+	<link rel="stylesheet" href="signUp.css">
+</head>
+
+<body>
+	<div class="formContainer">
+		<div class="form">
+			<div class="singUpText">Sign up</div>
+			<form onsubmit="callAPI()" method="post">
+				<p>
+					<i class="fa-solid fa-user icons"></i>
+					<input type="text" name="name" id="name" placeholder="Enter name">
+				</p>
+				<p>
+					<i class="fa-solid fa-envelope"></i>
+					<input type="text" name="eMail" id="eMail" placeholder="Your e-mail">
+				</p>
+				<p>
+					<i class="fa-solid fa-lock"></i>
+					<input type="password" name="password" id="password" placeholder="Password">
+				</p>
+				<p>
+					<!-- <i class="fa-solid fa-unlock-keyhole"></i> -->
+					<i class="fa-solid fa-arrow-rotate-right"></i>
+					<input type="password" name="repeatPass" id="repeatPass" placeholder="Repeat password">
+				</p>
+				<p>
+					<i class="fa-solid fa-address-book"></i>
+					<input type="text" name="contact" id="contact" placeholder="Contact no">
+				</p>
+				<p class="acknowledgementPara">
+					<input type="checkbox" name="acknowledge" id="acknowledge"> <label for="acknowledge">I agree terms in <a href="#">Terms of Service</a></label>
+				</p>
+				<p>
+					<input type="submit" value="Register">
+				</p>
+			</form>
+		</div>
+		<div class="formSupportImage">
+			<img src="./images/registerMobile.svg" alt="" srcset=""><br>
+			<a href="./signIn.html">Already a member?</a>
+		</div>
+	</div>
+	<script>
+		function callAPI(){
+			this.event.preventDefault();
+			alert("Form submitted");
+		}
+	</script>
+	<script src="https://kit.fontawesome.com/57097ff76e.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
