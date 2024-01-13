@@ -1,0 +1,62 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.section {
+	height: 65vh;
+	display: grid;
+	place-items: center;
+	border: 1px dotted gray;
+	margin: 5px;
+}
+.hide {
+	border: 1px dashed;
+	border-radius: 5px;
+	height: 100px;
+	width: 170px;
+	font-size: 1.4rem;
+	font-family: math;
+	display: grid;
+	place-items: center;
+	padding: 4px 10px;
+	background-color: rgb(151, 169, 250);
+	opacity: 0;
+	filter: blur(5px);
+	transition: all 600ms 100ms;
+}
+.show {
+	opacity: 1;
+	filter: blur(0px);
+}
+.hide.fromLeft:nth-child(2) {
+	transition-delay: 200ms;
+}
+.hide.fromLeft:nth-child(3) {
+	transition-delay: 300ms;
+}
+.fromLeft {
+	transform: translateX(-10vw);
+}
+.toLeft {
+	transform: translateX(0px);
+}
+.fromRight {
+	transform: translateX(40vw);
+}
+.toRight {
+	transform: translateX(0);
+}
+.fromTop {
+	transform: translateY(-40vh);
+}
+.toTop {
+	transform: translateY(0);
+}
+.fromBottom {
+	transform: translateY(40vw);
+}
+.toBottom {
+	transform: none;
+}

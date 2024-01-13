@@ -1,0 +1,13 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.timeSpent {
+	height: 65vh;
+	display: grid;
+	place-items: center;
+	border: 1px dotted gray;
+	margin: 5px;
+}
