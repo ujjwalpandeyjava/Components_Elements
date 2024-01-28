@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- In this we learned abour 2-D Grid -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid-(2-D grid)</title>
+</head>
+<style>
+    .outer {
+        margin: 30px;
+        border: 1.5px dashed blue;
+    }
+    
+    .outer2 {
+        border: 1.5px dotted purple;
+        margin: 20px;
+    }
+
+    .grid {
+        display: grid;
+        grid-gap: 4px;
+        padding: 5px;
+        grid-template-rows: 1fr 1fr 4fr;
+        /*Here we gave strting 3 grid rows fractions and other become 1fr automatic. */
+        grid-auto-rows: 2.2fr;
+        /* Determines the height of rows which we have not setted earlier */
+        grid-template-columns: 1fr 4fr 2fr;
+        /* It divides all the grid columns in given parts/fractions not like grid-rows which give parts to only given number of rows. */
+
+
+    }
+
+    .box {
+        background: red;
+        border: 1.3px solid black;
+        padding: 5px;
+    }
+</style>
+
+<body>
+    <div class="outer">
+        <div class="outer2">
+            <div class="grid">
+                <div class="box">This is a box</div>
+                <div class="box">This is a box</div>
+                <div class="box">This is a box</div>
+                <div class="box">This is a box</div>
+                <div class="box">This is a box</div>
+                <div class="box">This is a box</div>
+                <div class="box">This is a box</div>
+                <div class="box">This is a box</div>
+                <div class="box">This is a box</div>
+                <div class="box">This is a box</div>
+                <div class="box">This is a box</div>
+                <div class="box">This is a box</div>
+                <div class="box">This is a box</div>
+                <div class="box">This is a box</div>
+                <div class="box">This is a box</div>
+                <div class="box">This is a box</div>
+                <div class="box">This is a box</div>
+                <div class="box">This is a box</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

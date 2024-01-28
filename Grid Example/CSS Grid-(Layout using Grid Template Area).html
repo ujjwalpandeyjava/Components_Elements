@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid-Layout using Grid Template Area</title>
+</head>
+<style>
+    .outer {
+        margin: 30px;
+        border: 1.5px dashed blue;
+    }
+
+    .outer2 {
+        border: 1.5px dotted purple;
+        margin: 20px;
+    }
+
+    .container {
+        display: grid;
+        padding: 15px;
+        grid-gap: 1rem;
+        grid-template-areas:
+            'navbar navbar navbar navbar'
+            'section section section aside'
+            'footer footer footer footer';
+
+    }
+
+    .box {
+        background: rgb(255, 237, 133);
+        border: 1px solid rgb(26, 26, 29);
+        padding: 5px;
+        text-align: center;
+    }
+
+    #navbar {
+        grid-area: navbar;
+    }
+
+    #section {
+        grid-area: section;
+    }
+
+    #aside {
+        grid-area: aside;
+    }
+
+    #footer {
+        grid-area: footer;
+    }
+</style>
+
+<body>
+
+    <div class="outer">
+        <div class="outer2">
+            <div class="container">
+                <nav id="navbar" class="box">| Home | | Contact | | About | | Services |</nav>
+                <section id="section" class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
+                    reiciendis
+                    veniam exercitationem minus earum eveniet aut eos sequi officiis impedit incidunt et, delectus,
+                    magni facilis. Qui error perspiciatis fuga? Nesciunt illo neque veritatis itaque corrupti. Eum
+                    corrupti architecto obcaecati repellendus aliquid doloribus corporis doloremque molestiae blanditiis
+                    repellat totam beatae error optio illo voluptate nobis, sed vel est cupiditate hic cumque ipsam sit.
+                    Id quod vitae amet nalias non doloremque nulla minima rem suscipit fuga
+                    laboriosam delectus eius maxime reiciendis. Neque reprehenderit quibusdam quas nostrum nulla minima
+                    ullam veniam deserunt eos voluptas in repellat aliquid itaque odit ducimus illo iure velit
+                    voluptates sapiente, error porro ea nobis? Maiores sed repellendus quia assumenda cumque sapiente
+                    quae, tenetur vitae veniam repellat! Temporibus quidem reiciendis minus ipsa veniam mollitia vitae
+                    aperiam, harum nemo hic omnis eveniet ducimus, itaque pariatur reprehenderit dolore quos eius
+                    architecto excepturi suscipit perferendis expedita incidunt maxime voluptate. Quos esse labore,
+                    laborum ratione suscipit modi, repudiandae dignissimos fugiat soluta quidem, repellat error? Rerum.
+                </section>
+                <aside id="aside" class="box">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur
+                    iste magnam ipsa aliquid consequatur porro tempora similique obcaecati. Expedita optio veniam a
+                    itaque, cumque autem dignissimos dolore sapiente sequi magnam facilis debitis eaque in quas ipsum
+                    iste minus ab incidunt.
+                </aside>
+                <footer id="footer" class="box">Copyright @all rights reserved 2020</footer>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

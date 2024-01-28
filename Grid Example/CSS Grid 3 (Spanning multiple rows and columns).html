@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- In this we learned abour 2-D Grid -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid-Spanning multiple rows and columns</title>
+</head>
+<style>
+    .outer {
+        margin: 30px;
+        border: 1.5px dashed blue;
+    }
+
+    .outer2 {
+        border: 1.5px dotted purple;
+        margin: 20px;
+    }
+
+    .grid {
+        display: grid;
+        grid-column-gap: 14px;
+        grid-row-gap: 4px;
+
+        padding: 5px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-auto-rows: 2fr;
+
+    }
+
+    .box {
+        background: rgb(248, 154, 240);
+        border: 1.3px solid black;
+        padding: 5px;
+    }
+    .box:nth-child(2){
+        background: rgb(155, 176, 240);
+     /* grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-end: 5;
+        grid-row-start: 2;  //Position shofted bcz of this 2 inplace of 1 */
+                /* or these 2 are same  */
+        grid-column: 2/4;
+        grid-row: 2/5;
+    }
+</style>
+
+<body>
+    <div class="outer">
+        <div class="outer2">
+            <div class="grid">
+                <div class="box">This is box 1</div>
+                <div class="box">This is box 2</div>
+                <div class="box">This is box 3</div>
+                <div class="box">This is box 4</div>
+                <div class="box">This is box 5</div>
+                <div class="box">This is box 6</div>
+                <div class="box">This is box 7</div>
+                <div class="box">This is box 8</div>
+                <div class="box">This is box 9</div>
+                <div class="box">This is box 10</div>
+                <div class="box">This is box 11</div>
+                <div class="box">This is box 12</div>
+                <div class="box">This is box 13</div>
+                <div class="box">This is box 14</div>
+                <div class="box">This is box 15</div>
+                <div class="box">This is box 16</div>
+                <div class="box">This is box 17</div>
+                <div class="box">This is box 18</div>
+                <div class="box">This is box 19</div>
+                <div class="box">This is box 20</div>
+                <div class="box">This is box 21</div>
+                <div class="box">This is box 22</div>
+                <div class="box">This is box 23</div>
+                <div class="box">This is box 24</div>
+                <div class="box">This is box 25</div>
+                <div class="box">This is box 26</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
