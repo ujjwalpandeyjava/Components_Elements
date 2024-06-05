@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+.link {
+  text-decoration: none;
+  margin: 2px;
+  color: black;
+}
+
+.linkView {
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  padding: 2px;
+  margin: 2px 5px;
+  width: 35px;
+  color: black;
+  font-size: larger;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  border: 1px solid black;
+}

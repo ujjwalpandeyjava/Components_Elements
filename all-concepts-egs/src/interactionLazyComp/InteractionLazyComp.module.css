@@ -1,0 +1,13 @@
+.full {
+	min-height: 100vh;
+	background-color: antiquewhite;
+	border: 1px solid aqua;
+	margin: 10px;
+	padding: 1em;
+}
+
+.extra {
+	min-height: 300px;
+	border: 4px solid black;
+	background-color: rgb(212, 153, 153);
+}

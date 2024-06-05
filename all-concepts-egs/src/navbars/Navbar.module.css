@@ -1,0 +1,40 @@
+.mainNavbar {
+	display: block;
+	width: 100%;
+	top: 0;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+	margin-bottom: 1rem;
+}
+.navbar {
+	background: #f5f5ff;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-between;
+	align-items: center;
+	padding: 7px 1em;
+	color: black;
+	text-decoration: none;
+}
+.secondaryNav {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	column-gap: 1em;
+	align-items: center;
+}
+.secondaryNav a {
+	color: black;
+	text-decoration: none;
+	transition: 400ms all ease;
+	padding: 5px 10px;
+	border-radius: 3px;
+}
+.secondaryNav a:hover {
+	background-color: rgb(53, 53, 53);
+	color: white;
+	outline: 1px solid black;
+	box-shadow: 0 0 5px gray;
+}
