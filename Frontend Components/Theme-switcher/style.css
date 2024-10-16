@@ -1,0 +1,164 @@
+:root {
+	--gray0: #f8f8f8;
+	--gray1: #dbe1e8;
+	--gray2: #b2becd;
+	--gray3: #6c7953;
+	--gray4: #454e56;
+	--gray5: #2a2e35;
+	--gray6: #12181b;
+	--blue: #0084a5;
+	--purple: #a824a5;
+	--yellow: #fff565;
+	--bg-light: white;
+	--bg-dark: #050318;
+	--bg-solder: #04b82b;
+	--bg: var(--bg-light);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a {
+	color: currentColor;
+	text-decoration: none;
+}
+body {
+	color: var(--text);
+	background: var(--bg);
+	transition:
+		background 400ms ease-in-out,
+		color 800ms ease-in-out;
+}
+.navbar {
+	width: 100%;
+	background-color: black;
+	color: white;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+}
+ul.navbar-nav {
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	height: 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+li.nav-item {
+	position: relative;
+	text-decoration: none;
+	padding: 6px 12px;
+}
+li.nav-item a {
+	padding: 4px 8px;
+}
+li a:hover {
+	color: #111;
+	background-color: wheat;
+}
+/* header */
+header {
+	padding: 1em;
+	background: var(--bg-nav);
+	margin-bottom: 1em;
+	padding-bottom: 3em;
+	text-align: center;
+	clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+/* main content */
+.dropdown {
+	position: absolute;
+	opacity: 0;
+	background-color: #2b2b4c;
+	border-top: 2px solid white;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	top: 95%;
+	right: -1em;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	list-style-type: none;
+	transition: all 40ms ease-in;
+	font-size: medium;
+}
+
+.has-dropdown:focus-within .dropdown {
+	transition: all 400ms ease-in;
+	opacity: 1;
+}
+.dropdown-item {
+	position: relative;
+	padding: 4px 8px;
+	width: 7em;
+}
+.dropdown-item a:hover {
+	background-color: unset;
+}
+.dropdown-item a::before {
+	content: " ";
+	border: 1px solid white;
+	vertical-align: middle;
+	display: inline-block;
+	border-radius: 50%;
+	margin-right: 8px;
+	height: 0.51rem;
+	width: 0.5rem;
+}
+a#light::before {
+	background-color: white;
+}
+a#dark::before {
+	background-color: var(--gray6);
+}
+a#solder::before {
+	background-color: var(--bg-solder);
+}
+
+/* Theme work */
+.light {
+	--bg-nav: linear-gradient(to right, var(--gray1), var(--gray3));
+	--bg-dropdown: var(--gray0);
+	--text: var(--gray6);
+	--border-color: var(--bg-light);
+	--bg-solder: var(--purple);
+}
+.dark {
+	--bg: var(--gray6);
+	--bg-nav: linear-gradient(to right, var(--gray6), #18184d);
+	--bg-dropdown: var(--gray0);
+	--text: var(--gray0);
+	--border-color: var(--bg-dark);
+	--bg-solder: var(--purple);
+}
+/* Add this too with the dark/light to see more effects  */
+.solder {
+	--gray0: #fbffd4;
+	--gray1: #f7f8d0;
+	--gray2: #b6f880;
+	--gray3: #5ec72d;
+	--gray4: #3ea565;
+	--gray5: #005368;
+	--gray6: #142d33;
+	--text: #ad4242;
+}
+
+header .logo:hover {
+	animation: rainbow-effect 1.5s;
+	animation-iteration-count: 3;
+	animation-direction: alternate;
+}
+@keyframes rainbow-effect {
+	from {
+		filter: hue-rotate(0deg);
+	}
+	to {
+		filter: hue-rotate(360deg);
+	}
+}
