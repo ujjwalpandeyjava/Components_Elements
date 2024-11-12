@@ -1,5 +1,5 @@
-1. Bad code:
-```
+# Bad code
+
 switch (props.type) {
   case "ADMIN":
     return <Admin />;
@@ -8,10 +8,9 @@ switch (props.type) {
   default:
     return <NotFound />;
 }
-```
 
-2. Good code:
-```
+# Good code:
+
 const componentMap = {
   ADMIN: Admin,
   USER: User,
@@ -20,10 +19,9 @@ const componentMap = {
 
 const Component = componentMap[props.type];
 return <Component />;
-```
 
-3. Better code:
-```
+# Better code
+
 const componentMap = {
   ADMIN: React.lazy(() => import("./components/Admin")),
   USER: React.lazy(() => import("./components/User")),
@@ -32,4 +30,3 @@ const componentMap = {
 
 const Component = componentMap[props.type];
 return <Component />;
-```

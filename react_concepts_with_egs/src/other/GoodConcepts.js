@@ -1,5 +1,5 @@
 // Debouncing example (using a timer)
-const timeout = "";
+let timeout = "";
 function debouncedFunction(arg) {
 	clearTimeout(timeout);
 	timeout = setTimeout(() => {
@@ -8,7 +8,7 @@ function debouncedFunction(arg) {
 }
 
 // Throttling example (using a flag)
-var canCallFunction = true;
+let canCallFunction = true;
 function throttledFunction(arg) {
 	if (canCallFunction) {
 		console.log('Throttled function:', arg);

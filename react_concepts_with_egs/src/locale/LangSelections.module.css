@@ -1,0 +1,54 @@
+.langOptions {
+	position: relative;
+	overflow: hidden;
+	font-size: 20px;
+}
+
+.langOptions:hover,
+.langOptions:focus {
+	overflow: visible;
+}
+.langOptionList {
+	position: absolute;
+	bottom: 50%;
+	right: 50%;
+	width: auto;
+	overflow: hidden;
+	transition: all ease 300ms;
+	flex-wrap: wrap;
+	border: 1px solid transparent;
+	opacity: 0;
+	background-color: white;
+	max-width: 300px;
+	display: none;
+	padding: 15px 0;
+}
+.langOptionList button {
+	border: unset;
+	background: unset;
+}
+
+.langOptions:hover .langOptionList {
+	display: flex;
+	opacity: 1;
+	border-color: gainsboro;
+	min-width: 326px;
+	background: white;
+	z-index: 1000;
+}
+
+.lang {
+	width: 50%;
+	min-width: 140px;
+	text-align: left;
+	padding: 13px 15px;
+	cursor: pointer;
+	font-size: 14px;
+}
+.lang:hover {
+	background-color: #f5f9fb;
+}
+
+.selected {
+	background-color: #f5f9fb;
+}
