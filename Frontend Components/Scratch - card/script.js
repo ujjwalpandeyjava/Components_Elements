@@ -1,62 +1,106 @@
-const canvas = document.getElementById("scratchCanvas");
-const ctx = canvas.getContext("2d");
-const scratchArea = canvas.getBoundingClientRect();
+let canvas = document.getElementById("scratch");
+let context = canvas.getContext("2d");
 
-// Set up the canvas size
-canvas.width = scratchArea.width;
-canvas.height = scratchArea.height;
+const init = () => {
+	let gradientColor = context.createLinearGradient(0, 0, 135, 135);
+	gradientColor.addColorStop(0, "#c3a3f1");
+	gradientColor.addColorStop(1, "#6414e9");
+	context.fillStyle = gradientColor;
+	context.fillRect(0, 0, 200, 200);
+};
 
-// Style the scratchable surface
-ctx.fillStyle = "#888";
-ctx.fillRect(0, 0, canvas.width, canvas.height);
+let mouseX = 0;
+let mouseY = 0;
+let isDragged = false;
 
-// Draw the scratchable "paint"
-ctx.fillStyle = "#da4c4c";
-ctx.globalCompositeOperation = "source-over";
-ctx.fillRect(0, 0, canvas.width, canvas.height);
+let events = {
+	mouse: {
+		down: "mousedown",
+		move: "mousemove",
+		up: "mouseup",
+	},
+	touch: {
+		down: "touchstart",
+		move: "touchmove",
+		up: "touchend",
+	},
+};
 
-// Listen for touch or mouse events
-let isScratching = false;
+let deviceType = "";
 
-function startScratch(event) {
-	isScratching = true;
-}
-
-function stopScratch() {
-	isScratching = false;
-
-	// Check if enough has been scratched off
-	const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
-	let scratchedPixels = 0;
-	for (let i = 3; i < imageData.length; i += 4) {
-		if (imageData[i] === 0) scratchedPixels++;
+// Detect touch device
+const isTouchDevice = () => {
+	try {
+		document.createEvent("TouchEvent");
+		deviceType = "touch";
+		return true;
+	} catch (e) {
+		deviceType = "mouse";
+		return false;
 	}
+};
+
+let rectLeft = canvas.getBoundingClientRect().left;
+let rectTop = canvas.getBoundingClientRect().top;
+
+// Get exact x and y position
+const getXY = (e) => {
+	mouseX = (!isTouchDevice() ? e.pageX : e.touches[0].pageX) - rectLeft;
+	mouseY = (!isTouchDevice() ? e.pageY : e.touches[0].pageY) - rectTop;
+};
+
+isTouchDevice();
+
+canvas.addEventListener(events[deviceType].down, (event) => {
+	isDragged = true;
+	getXY(event);
+	scratch(mouseX, mouseY);
+});
+
+canvas.addEventListener(events[deviceType].move, (event) => {
+	if (!isTouchDevice()) {
+		event.preventDefault();
+	}
+	if (isDragged) {
+		getXY(event);
+		scratch(mouseX, mouseY);
+		checkScratchProgress();
+	}
+});
+
+canvas.addEventListener(events[deviceType].up, () => {
+	isDragged = false;
+});
+
+canvas.addEventListener("mouseleave", () => {
+	isDragged = false;
+});
+
+const scratch = (x, y) => {
+	context.globalCompositeOperation = "destination-out";
+	context.beginPath();
+	context.arc(x, y, 12, 0, 2 * Math.PI);
+	context.fill();
+};
+
+// Check the scratch progress
+const checkScratchProgress = () => {
+	const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+	let scratchedPixels = 0;
+	for (let i = 3; i < imageData.data.length; i += 4)
+		if (imageData.data[i] === 0) scratchedPixels++;
 
 	const totalPixels = canvas.width * canvas.height;
 	const scratchedPercentage = (scratchedPixels / totalPixels) * 100;
+	if (scratchedPercentage > 55)
+		revealContent();
+};
 
-	if (scratchedPercentage > 30) {
-		canvas.style.display = "none"; // Hide canvas to reveal content
-	}
-}
+// Reveal the content by clearing the canvas
+const revealContent = () => {
+	context.clearRect(0, 0, canvas.width, canvas.height);
+	canvas.style.pointerEvents = "none"; // Disable further scratching
+};
 
-function scratch(event) {
-	if (!isScratching) return;
-
-	const x = (event.touches ? event.touches[0].clientX : event.clientX) - scratchArea.left;
-	const y = (event.touches ? event.touches[0].clientY : event.clientY) - scratchArea.top;
-
-	ctx.globalCompositeOperation = "destination-out";
-	ctx.beginPath();
-	ctx.arc(x, y, 20, 0, Math.PI * 2);
-	ctx.fill();
-}
-
-// Attach event listeners
-canvas.addEventListener("mousedown", startScratch);
-canvas.addEventListener("mouseup", stopScratch);
-canvas.addEventListener("mousemove", scratch);
-
-canvas.addEventListener("touchstart", startScratch);
-canvas.addEventListener("touchend", stopScratch);
-canvas.addEventListener("touchmove", scratch);
+// Initialize the scratch card
+window.onload = init();
