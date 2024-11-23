@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: hsl(5, 77%, 91%);
+}
+/* header */
+.header,
+.content {
+    min-width: 350px;
+    width: 70%;
+    padding: 25px;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+    box-shadow: 1px 1px 3px rgb(172, 130, 170);
+    background-color: #ffcfcb;
+}
+.header {
+    position: relative;
+    padding-top: 8rem;
+    margin-top: 3rem;
+    margin-bottom: 5px;
+    /* opacity: 0; */
+    font-family: cursive;
+    transform: scale(0.8);
+    transition: opacity 0.25s ease-in-out, transform 0.5s linear;
+}
+.main-photo {
+    position: absolute;
+    background: url("../images/logo-1.jpg");
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: scale(0.7);
+}
+.menu-btn {
+    position: absolute;
+    right: 14px;
+    top: 15px;
+    padding: 9px;
+    font-size: 35px;
+    transform: rotate(90deg);
+    letter-spacing: -0.8px;
+}
+ul,
+p {
+    padding-left: 8px;
+    margin: 35px 0;
+    font-size: 1.2rem;
+}
+p > strong {
+    font-size: 1.4rem;
+}
+
+/* img designing */
+img {
+    width: 90%;
+    height: auto;
+}
+.grid-item {
+    justify-content: center;
+    text-align: center;
+    background-color: floralwhite;
+    min-width: 199px;
+    width: 45%;
+    margin: -10px auto 13vh auto;
+    padding: 10px;
+    box-shadow: -1px 8px 10px 0px #797979;
+    border-radius: 0.3em;
+    opacity: 0;
+    transform: translateX(1%) rotate(-1deg);
+
+    transition: opacity 0.5s cubic-bezier(0.1, 0.48, 0.45, 0.94), transform 1s;
+}
+.grid-item div {
+    padding: 20px 10px;
+    text-align: center;
+    justify-content: center;
+}
+.isVisible {
+    opacity: 1;
+    transform: translateX(-20%) rotate(-8deg);
+}
+.header.isVisible {
+    opacity: 1;
+    transform: none;
+}
+/*Footer*/
+footer {
+    display: block;
+    background-color: rgb(21, 20, 20);
+    color: white;
+    padding: 20px;
+    font-size: 1.2rem;
+    margin: 5px 0px;
+}
