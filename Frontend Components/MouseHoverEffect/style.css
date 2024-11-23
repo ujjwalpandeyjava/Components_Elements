@@ -1,0 +1,33 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+#colorChangeArea {
+	display: grid;
+	place-items: center;
+	min-height: 40dvh;
+	background-color: black;
+	color: white;
+	font-size: 2rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+.hoverContent {
+	font-size: 1rem;
+}
+#moveDiv {
+	transform: translate(-50%, -50%);
+	position: absolute;
+	width: 1.5em;
+	height: 1.5em;
+	background-color: #ffffff;
+	border-radius: 50%;
+	mix-blend-mode: difference;
+}
+
+.anotherCont {
+	color: black;
+	padding: 1em;
+}
