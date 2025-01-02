@@ -1,0 +1,79 @@
+#connectMain {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	pointer-events: none;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	color: white;
+	align-items: flex-end;
+	padding-inline: 2em;
+}
+.socialIcons {
+	height: 100dvh;
+	display: inline-flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+	gap: 5px;
+}
+.socialIcons > a {
+	pointer-events: all;
+	cursor: pointer;
+	transition: all 300ms ease-in-out;
+	display: grid;
+	padding: 5px;
+	place-items: center;
+}
+.socialIcons > a:hover {
+	background-color: rgb(211, 211, 211);
+	border-radius: 50%;
+	font-size: 1rem;
+	aspect-ratio: 1/1;
+}
+.contactEmail {
+	height: 100dvh;
+	width: 1em;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.contactEmail > .div {
+	flex: 1;
+}
+.contactEmail > .e_mailContainer {
+	/* height: calc(100% - 3em); */
+	font-size: 1rem;
+	height: 600px;
+}
+.contactEmail > .e_mailContainer > .e_mail {
+	transform: rotate(90deg) translate(0, -50%);
+	pointer-events: all;
+	color: black;
+	transform-origin: left;
+}
+.emptyTop {
+	min-height: 40%;
+	display: block;
+	width: 5px;
+	margin-inline: auto;
+	margin-block-end: 1rem;
+}
+.lineBottom,
+.lineBottom2 {
+	background-color: black;
+	border: 1px gray;
+	height: 100%;
+	width: 4px;
+	border-radius: 4px;
+	/* margin-block-start: 1rem; */
+	margin-inline: auto;
+}
+.lineBottom2 {
+	height: calc(100% - 26ch);
+}

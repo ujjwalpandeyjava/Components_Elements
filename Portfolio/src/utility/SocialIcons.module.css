@@ -1,0 +1,77 @@
+.socialIcons {
+	display: flex;
+	width: max-content;
+	margin: auto;
+	/* background-color: #ff8800; */
+	border-radius: 50px;
+	padding: 3px;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	gap: 8px;
+}
+.icon {
+	justify-content: center;
+	cursor: pointer;
+	position: relative;
+	border-radius: 50%;
+	z-index: 2;
+	display: grid;
+	border: 1px solid #e1e1e1c2;
+	background: #e1e1e185;
+	aspect-ratio: 1/1;
+	place-items: center;
+	width: 2rem;
+}
+.icon > a {
+	text-decoration: none;
+	color: #161616;
+	z-index: 3;
+	font-size: 1em;
+	/* width: 1em; */
+	height: 1rem;
+	aspect-ratio: 1/1;
+}
+.icon .tooltip {
+	position: absolute;
+	top: 0px;
+	/* background: #0f1124; */
+	background: white;
+	color: black;
+	font-weight: bold;
+	font-size: 1rem;
+	padding: 9px 18px 12px;
+	border-radius: 25px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	cursor: text;
+}
+.icon .tooltip a {
+	text-decoration: none;
+	color: black;
+}
+.icon:hover .tooltip {
+	top: -40px;
+	opacity: 1;
+	pointer-events: all;
+}
+.icon .tooltip::before {
+	position: absolute;
+	z-index: 1;
+	content: "";
+	height: 15px;
+	width: 15px;
+	/* background: #0f1124; */
+	background: white;
+	bottom: -7px;
+	left: 50%;
+	transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transform: translateX(-50%) rotate(45deg);
+}
+.icon:hover a,
+.icon:hover .tooltip {
+	text-shadow: 0px -1px 0px rgba(255, 255, 255, 0.4);
+}

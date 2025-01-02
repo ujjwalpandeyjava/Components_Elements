@@ -1,0 +1,107 @@
+.sectionEE {
+	background-color: rgba(250, 250, 250, 0.54);
+	padding: 1.8rem 3rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: stretch;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.qualification,
+.workExperience {
+	/* background-color: #fff5e794; */
+	padding: 7px;
+	border-radius: 7px;
+	flex: 1 1;
+	min-width: 300px;
+}
+@media all and (width <= 600px) {
+	.qualification,
+	.workExperience {
+		min-width: 100%;
+	}
+}
+.heading {
+	color: #27569a;
+}
+.subHeading {
+	font-size: x-large;
+	font-weight: bold;
+	margin-block: 10px 20px;
+}
+.details {
+	position: relative;
+	margin: 30px 0 20px 10px;
+}
+.details::after {
+	content: "";
+	position: absolute;
+	height: 110%;
+	top: 0;
+	left: 0%;
+	width: 3px;
+	border-radius: 2px;
+	transform: translateX(-50%) translateY(-8px);
+	background: linear-gradient(to top, rgba(134, 214, 243, 0) 0%, rgba(81, 106, 204, 1) 100%);
+	background: linear-gradient(to top, rgba(134, 214, 243, 0) 0%, rgb(202 202 202) 100%);
+}
+.details > .eachWorkSection {
+	padding: 0 0 25px 20px;
+	/* text-transform: capitalize; */
+	position: relative;
+}
+.details > .eachWorkSection::after {
+	content: "";
+	height: 5px;
+	width: 5px;
+	background-color: #4cabff;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 0 2px 1px #57b0ff;
+	z-index: 1;
+	transition: all 200ms ease-in-out;
+}
+/* Not working.... */
+.eachWorkSection::after:hover {
+	box-shadow: 0 0 2px 2px #57b0ff;
+	background-color: red;
+}
+
+.name {
+	color: black;
+	font-weight: bold;
+}
+.name > .time {
+	color: gray;
+	font-weight: normal;
+	font-size: small;
+	/* font-style: italic; */
+	font-family: serif;
+}
+.someDetails {
+	color: gray;
+	font-size: 0.92em;
+	margin-top: 0.5em;
+}
+.type {
+	color: #002c46;
+	background: #c7eaff;
+	border-radius: 1em;
+	padding: 4px 20px;
+	display: inline-block;
+	margin-top: 1em;
+}
+
+.responsibilities {
+	margin-top: 3px;
+	cursor: pointer;
+	color: rgb(99, 99, 99);
+}
+.responsibilities ul {
+	margin-left: 2rem;
+}

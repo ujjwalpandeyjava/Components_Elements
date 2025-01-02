@@ -1,0 +1,107 @@
+:root {
+	--eachSkillHeightWidth: 200px;
+}
+.skillSection {
+	padding: 2em 3em;
+}
+
+.heading {
+	color: red;
+	font-size: 2em;
+	/* display: inline-block; */
+	white-space: nowrap;
+	margin: 8px 0;
+}
+.heading > .underline {
+	width: 120px;
+	height: 4px;
+	background: rgb(253, 29, 29);
+	border-radius: 3px;
+	background: linear-gradient(
+		90deg,
+		rgba(253, 29, 29, 1) 0%,
+		rgba(251, 181, 39, 0.6) 64%,
+		rgba(252, 176, 69, 0) 100%
+	);
+}
+.skillShowCase {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+}
+.previousNextAction {
+	padding-left: 10px;
+}
+.previousSkill,
+.nextSkill {
+	background-color: rgb(227, 227, 227);
+	border-radius: 50%;
+	cursor: pointer;
+	width: 50px;
+	display: grid;
+	place-content: center;
+	aspect-ratio: 1/1;
+	margin-bottom: 12px;
+}
+.previousSkill:hover,
+.nextSkill:hover {
+	background-color: rgb(186, 186, 186);
+}
+.previousSkill:active,
+.nextSkill:active {
+	background-color: rgb(143, 143, 143);
+	box-shadow: 0 0 5px rgb(152, 152, 152);
+}
+
+.allSkills {
+	/* width: 100%; */
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-around;
+	align-items: stretch;
+	gap: 1em;
+	max-height: calc(var(--eachSkillHeightWidth) * 2);
+	scroll-snap-type: y mandatory;
+	overflow: auto;
+	padding: 12px;
+	/* margin: auto; */
+	max-width: 1000px;
+}
+.allSkills::-webkit-scrollbar {
+	display: none;
+}
+.eachSkill {
+	text-align: left;
+	padding: 8px 5px 8px 13px;
+	scroll-snap-align: center;
+	background-color: rgba(242, 231, 251, 0.795);
+	min-width: var(--eachSkillHeightWidth);
+	max-width: var(--eachSkillHeightWidth);
+	max-height: calc(var(--eachSkillHeightWidth) * 1.1);
+	aspect-ratio: 1/0.9;
+	overflow: auto;
+	border-radius: 7px;
+	color: orangered;
+	color: #3e3e3e;
+	border: 1px solid rgb(176, 176, 176);
+	box-shadow:
+		rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+		rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+	transition: all 200ms ease-in-out;
+}
+.eachSkill:hover {
+	box-shadow:
+		rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+		rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+	/* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+}
+.skillIcon {
+	font-size: 3em;
+	margin-bottom: 6px;
+}
+.eachSkillDescription {
+	color: gray;
+	font-size: 0.85em;
+}
