@@ -2,6 +2,8 @@
 
 import { useEffect } from 'react'
 
+
+// Components picks the nearest parent error file route (we can have a global-error.tsx)
 export default function GlobalError(
 	{ error }: Readonly<{ error: Error & { digest?: string } }>
 ) {
@@ -14,3 +16,14 @@ export default function GlobalError(
 		<h2>Something went wrong! Global error!</h2>
 	)
 }
+
+// Component Hierarchy
+// <Layout>
+// 	<ErrorBoundary fallback={<Error />}>
+// 		<Layout>
+// 			<ErrorBoundary fallback={<Error />}>
+// 				<Page />
+// 			</ErrorBoundary>
+// 		</Layout>
+// 	</ErrorBoundary>
+// </Layout>

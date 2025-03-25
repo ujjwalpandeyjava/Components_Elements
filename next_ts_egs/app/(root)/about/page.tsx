@@ -1,9 +1,7 @@
 import React from 'react'
 
-function Company() {
-	return (
-		<div>Company</div>
-	)
+// app/about/page.tsx
+export default async function About() {
+	await new Promise((resolve) => setTimeout(resolve, 2000)); // Simulate a delay
+	return <div>About Page</div>;
 }
-
-export default Company

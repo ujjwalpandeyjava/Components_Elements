@@ -16,6 +16,9 @@ export default function Home() {
         <h1>Home page</h1>
         <Hello />
         <br />
+        <Link href="/about">To About</Link>
+        <br />
+        <br />
         <Link href="/pageWithIssue">To pageWithIssue</Link>
         <br />
         <br />

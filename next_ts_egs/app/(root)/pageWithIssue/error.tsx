@@ -4,16 +4,26 @@ import { useEffect } from 'react'
 
 
 // Components picks the nearest parent error file route (we can have a global-error.tsx)
-export default function Error({ error, reset }: { error: Error & { digest?: string }, reset: () => void }) {
+export default function GlobalError(
+	{ error }: Readonly<{ error: Error & { digest?: string } }>
+) {
 	useEffect(() => {
 		if (error)
 			console.error(error)
 	}, [error])
 
 	return (
-		<div>
-			<h2>Something went wrong!</h2>
-			<button onClick={reset}>Try again</button>
-		</div>
+		<h2>Something went wrong!</h2>
 	)
 }
+
+// Component Hierarchy
+// <Layout>
+// 	<ErrorBoundary fallback={<Error />}>
+// 		<Layout>
+// 			<ErrorBoundary fallback={<Error />}>
+// 				<Page />
+// 			</ErrorBoundary>
+// 		</Layout>
+// 	</ErrorBoundary>
+// </Layout>

@@ -1,6 +1,5 @@
-const pageWithIssue = () => {
-	throw new Error("Component with error")
-	
+const pageWithIssue = async () => {
+	throw new Error("Component with error!")
 	return (
 		<div>
 			pageWithIssue
