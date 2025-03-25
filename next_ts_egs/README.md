@@ -1,3 +1,74 @@
+# Learning
+
+## Client, Server Component
+
+Next.js has by default `Server components`
+
+Long on the server component are visible in the terminal and in the browser console with tag server.
+
+### When to use what component?
+
+Use server component all the time until you need user interaction on the component.
+
+https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns#when-to-use-server-and-client-components
+
+### Server components
+
+Came from React's Server components.
+
+- SEO
+- Direct DB connection
+- File system connection
+- Less JS for client side
+- Faster for initial page load
+- Keep sensitive token on server
+
+### Client Component
+
+The base of SPA (Single page application)
+
+- Only initial load on the client side
+- Faster in interaction
+- Dynamic page section update
+
+> To make a component client component use: `use client` on top of component.
+
+## Server-Side pre-rendering
+
+All the client components are pre-renders on server side.
+
+**Server-side pre-rendering** refers to generating the HTML for a web page on the server before sending it to the client, renders all static sections, and intractable section as placeholder which are put by browser. This ensures that users receive a fully rendered HTML page immediately, improving initial load times and SEO.
+
+Unlike client-side rendering, which relies on JavaScript in the browser, server-side pre-rendering avoids delays caused by loading and executing scripts.
+
+## Routing (latest app routing)
+
+## Route Groups
+
+- Used to organize routes and folders
+- Used to organize layout of groups
+- Manage route segments, render content all without showing in url/ui
+
+```eg
+(group_name)
+ - route a
+   - route a-a
+ - route b
+   - [id] nested route
+```
+
+It have have it's layout, middleware and more.
+
+Organize route structure, no impact on the url, and can have different layouts.
+
+Don't need page.tsx files.
+
+## Error Handling
+
+Very important
+
+## Default
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
