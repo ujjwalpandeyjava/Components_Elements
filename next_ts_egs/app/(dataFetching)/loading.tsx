@@ -1,9 +1,8 @@
 const loading = () => {
 	return (
 		<div>
-			_______________
+			_______________ Data Fetching
 		</div>
 	)
 }
-
 export default loading

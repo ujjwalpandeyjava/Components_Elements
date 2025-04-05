@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
-import { addTodo, fetchData, removeTodo } from "./reducer/todoSlice";
+import { addTodo, fetchData, removeTodo } from "./withThunk/todoSlice";
 import { useState } from "react";
 
 const styles = {
