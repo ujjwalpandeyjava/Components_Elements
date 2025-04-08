@@ -14,6 +14,7 @@ export default function Home() {
     return (
       <>
         <h1>Home page</h1>
+        <Link href="/dashboard">To dashboard</Link> |
         <Hello />
         <br />
         <Link href="/about">To About</Link>

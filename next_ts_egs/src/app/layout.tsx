@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ErrorWrapper } from './error-wrapper';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,7 +23,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <h3>ROOT layout</h3>
-        {children}
+        <ErrorWrapper>{children}</ErrorWrapper>
       </body>
     </html>
   );

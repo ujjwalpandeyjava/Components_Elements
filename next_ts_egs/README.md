@@ -1,5 +1,13 @@
 # Learning
 
+## Run in dev mode
+
+`npm run next --turbopack`
+
+## Run in production mode
+
+`npm run build` --> `npm run start`
+
 ## Client, Server Component
 
 Next.js has by default `Server components`
