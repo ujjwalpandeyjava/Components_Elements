@@ -6,6 +6,8 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import '@mantine/core/styles.css';
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,14 +28,16 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <MantineProvider>
-          <i>ROOT layout</i>
-          <Header />
-          <ErrorWrapper>
-            {children}
-          </ErrorWrapper>
-          <Footer />
-        </MantineProvider>
+        <ThemeProvider>
+          <MantineProvider>
+            <i>ROOT layout</i>
+            <Header />
+            <ErrorWrapper>
+              {children}
+            </ErrorWrapper>
+            <Footer />
+          </MantineProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

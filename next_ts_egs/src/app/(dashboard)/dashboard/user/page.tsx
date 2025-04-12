@@ -1,10 +1,11 @@
 import Link from "next/link"
 
+
 const User = () => {
-	
+
 	return (
 		<>
-			Users 
+			Users
 			<br />
 			<br />
 			<ul>
