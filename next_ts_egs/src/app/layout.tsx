@@ -1,7 +1,11 @@
-import type { Metadata } from "next";
+import { MantineProvider } from '@mantine/core';
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from "next";
 import { ErrorWrapper } from './error-wrapper';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import '@mantine/core/styles.css';
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,8 +26,14 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <h3>ROOT layout</h3>
-        <ErrorWrapper>{children}</ErrorWrapper>
+        <MantineProvider>
+          <i>ROOT layout</i>
+          <Header />
+          <ErrorWrapper>
+            {children}
+          </ErrorWrapper>
+          <Footer />
+        </MantineProvider>
       </body>
     </html>
   );

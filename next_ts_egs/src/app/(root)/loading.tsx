@@ -1,9 +1,8 @@
+import Card from '../../components/Card';
+
 const loading = () => {
 	return (
-		<div>
-			_______________
-		</div>
+		<Card>Loading</Card>
 	)
 }
-
 export default loading

@@ -14,6 +14,12 @@ Next.js has by default `Server components`
 
 Long on the server component are visible in the terminal and in the browser console with tag server.
 
+## Project fils and folder
+
+https://nextjs.org/docs/app/getting-started/project-structure
+
+---
+
 ### When to use what component?
 
 Use server component all the time until you need user interaction on the component.

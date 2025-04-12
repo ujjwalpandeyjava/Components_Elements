@@ -2,7 +2,7 @@ import wait from "wait"
 import Link from 'next/link';
 
 const Dashboard = async () => {
-	await wait(2000)	// Simulate a delay
+	await wait(1000)	// Simulate a delay
 	return (
 		<div>
 			<div>Dashboard</div>

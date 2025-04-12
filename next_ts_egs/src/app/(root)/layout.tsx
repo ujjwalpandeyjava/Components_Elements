@@ -6,5 +6,4 @@ const layoutRoot = ({ children }: Readonly<{ children: React.ReactNode; }>) => {
 		</div>
 	)
 }
-
 export default layoutRoot

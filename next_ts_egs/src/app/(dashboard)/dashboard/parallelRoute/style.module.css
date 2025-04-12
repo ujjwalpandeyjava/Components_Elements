@@ -1,0 +1,26 @@
+.mainCont {
+	background-color: white;
+	color: black;
+	padding: 1em;
+}
+.container {
+	margin-top: 1em;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	gap: 1em;
+	justify-content: space-around;
+	align-items: stretch;
+}
+.container > div {
+	background-color: white;
+	border: 1px solid gray;
+	box-shadow: 3px 3px 8px rgb(229, 229, 233);
+	padding: 1em;
+	border-radius: 4px;
+	flex: 1 1 300px;
+}
+.container > div:hover {
+	background-color: aliceblue;
+}
