@@ -8,7 +8,6 @@ const Dashboard = async () => {
 			<div>Dashboard</div>
 			<p><Link href={{ pathname: '/dashboard/parallelRoute', query: { name: 'test' } }}>To parallelRoute</Link></p>
 			<p><Link href={"/dashboard/user"}>User</Link></p>
-			<p><Link href={"/dashboard/contextRoute"}>Context-Route</Link></p>
 		</div >
 	)
 }

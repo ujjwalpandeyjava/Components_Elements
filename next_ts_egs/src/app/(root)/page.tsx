@@ -16,14 +16,10 @@ export default function Home() {
         <h1>Home page</h1>
         <Link href="/dashboard">To dashboard</Link> |
         <Hello />
-        <br />
-        <Link href="/about">To About</Link>
-        <br />
-        <br />
-        <Link href="/pageWithIssue">To pageWithIssue</Link>
-        <br />
-        <br />
-        <Link href="/pageWithIssue2">To pageWithIssue2</Link>
+        <p><Link href="/about">To About</Link></p>
+        <p><Link href="/pageWithIssue">To pageWithIssue</Link></p>
+        <p><Link href="/pageWithIssue2">To pageWithIssue2</Link></p>
+        <p><Link href="/contextProviderEg">To contextProviderEg</Link></p>
       </>
     )
   }

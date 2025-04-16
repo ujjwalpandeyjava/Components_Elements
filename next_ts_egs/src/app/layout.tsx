@@ -6,7 +6,8 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import '@mantine/core/styles.css';
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/contexts/theme-provider";
+import { UserProviderWrapper } from '@/contexts/UserContext';
 
 
 const geistSans = Geist({
@@ -28,17 +29,20 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <ThemeProvider>
-          <MantineProvider>
-            <i>ROOT layout</i>
-            <Header />
-            <ErrorWrapper>
-              {children}
-            </ErrorWrapper>
-            <Footer />
-          </MantineProvider>
-        </ThemeProvider>
+        <UserProviderWrapper> {/* Context provider user details - global state management */}
+          <ThemeProvider>{/* Context provider app theme - global state management */}
+            <MantineProvider>
+              <i>ROOT layout</i>
+              <Header />
+              <ErrorWrapper>
+                {children}
+              </ErrorWrapper>
+              <Footer />
+            </MantineProvider>
+          </ThemeProvider>
+        </UserProviderWrapper>
       </body>
+
     </html>
   );
 }
