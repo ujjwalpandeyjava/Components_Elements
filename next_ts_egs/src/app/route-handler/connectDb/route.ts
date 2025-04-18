@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 import dbConnect from '../../../lib/dbConnect';
 import mongoose from 'mongoose';
 
-// // GEt request on /route-handler/connectDb
+// // GET request on /route-handler/connectDb
 // export async function GET() {
 // 	return NextResponse.json({ message: 'is db connected: ' });
 // }

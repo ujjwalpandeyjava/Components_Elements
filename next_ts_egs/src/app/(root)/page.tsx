@@ -20,6 +20,7 @@ export default function Home() {
         <p><Link href="/pageWithIssue">To pageWithIssue</Link></p>
         <p><Link href="/pageWithIssue2">To pageWithIssue2</Link></p>
         <p><Link href="/contextProviderEg">To contextProviderEg</Link></p>
+        <p><Link href="/actionUse">To Action Use</Link></p>
       </>
     )
   }

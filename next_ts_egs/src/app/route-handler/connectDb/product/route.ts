@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
-import dbConnect from '../../../../lib/dbConnect';
-import Product from '../../../../models/Product';
+import dbConnect from "@/lib/dbConnect";
+import Product from '@/actions/models/Product';
+
 
 export async function GET() {
 	await dbConnect();
@@ -15,9 +16,6 @@ export async function GET() {
 
 export async function POST(request: Request) {
 	try {
-		// Connect to the database
-		await dbConnect();
-
 		// Parse JSON body
 		const body = await request.json();
 
@@ -30,6 +28,8 @@ export async function POST(request: Request) {
 			);
 		}
 
+		// Connect to the database
+		await dbConnect();
 		// Create a new product in the database
 		const newProduct = await Product.create({
 			name,
@@ -38,7 +38,6 @@ export async function POST(request: Request) {
 			category,
 			picture,
 		});
-
 		return NextResponse.json(newProduct, { status: 201 });
 	} catch (error) {
 		console.error("Error creating product:", error);

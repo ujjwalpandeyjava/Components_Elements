@@ -7,6 +7,7 @@ import { useActionState } from "react";
 export default function AddProductPage() {
   const initialState: FormState = {
     errors: {},
+    data: {}
   };
 
   const [state, formAction] = useActionState(createProduct, initialState);

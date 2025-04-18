@@ -4,14 +4,15 @@ import { addProduct, updateProduct, deleteProduct } from "@/prisma-db";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 
+
 export type Errors = {
   title?: string;
   price?: string;
   description?: string;
-};
-
+}
 export type FormState = {
   errors: Errors;
+  data: any;
 };
 
 export async function createProduct(prevState: FormState, formData: FormData) {

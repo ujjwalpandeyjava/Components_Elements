@@ -166,3 +166,13 @@ a.secondary {
     filter: invert();
   }
 }
+
+/* Root section */
+.layoutContent {
+  margin: 1em;
+  padding: 1em;
+  border: 1px solid saddlebrown;
+  border-radius: 1em;
+  box-shadow: 0 0 4px gray;
+  background-color: #f1f1f1d0;
+}
