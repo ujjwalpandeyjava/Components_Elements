@@ -2,9 +2,6 @@ import mongoose from "mongoose";
 import { MONGODB_URI } from '@/utils/Constants';
 
 
-
-
-
 // Use a typed global variable directly to persist connection status across hot reloads in development
 const connection = global.mongooseConnection || (global.mongooseConnection = {});
 

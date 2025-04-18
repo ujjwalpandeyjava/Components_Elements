@@ -1,20 +1,10 @@
-import { ProductInter, addProduct } from '@/actions/models/Product';
+// This all is client side
+"use client"
 
-export type ProductCreate = {
-	data: ProductInter | null;
-	errors: ProductErrors;
-	success: boolean
-}
-export type ProductErrors = {
-	title?: string;
-	price?: string;
-	description?: string;
-}
-export const defaultCreateFormState: ProductCreate = {
-	data: null,
-	errors: {},
-	success: false
-}
+import { ProductErrors, ProductCreate } from './actions_Interface';
+import { addProduct } from "@/actions/models/Product"
+
+
 export async function createProduct(prevState: ProductCreate, formData: FormData): Promise<ProductCreate> {
 	console.log("Reached the createProduct in actions/productActions.ts");
 
@@ -25,23 +15,22 @@ export async function createProduct(prevState: ProductCreate, formData: FormData
 
 	// Validation
 	const errors: ProductErrors = {};
-	if (!title) {
+	if (!title)
 		errors.title = "Title is required";
-	}
-	if (!price) {
+	if (!price)
 		errors.price = "Price is required";
-	}
-	if (!description) {
+	if (!description)
 		errors.description = "Description is required";
-	}
 	if (Object.keys(errors).length > 0) {
 		prevState.errors = errors
+		prevState.success = false
 		return prevState;
 	}
 
-	// Real action
+
+	// Real action (why this as the db actions must be server side)
 	prevState.data = await addProduct(title, price, description, "", "");
 	prevState.success = true
-	// redirect("./home")
+	prevState.errors = {}
 	return prevState;
 }
