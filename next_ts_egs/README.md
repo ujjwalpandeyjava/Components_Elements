@@ -16,7 +16,7 @@ Long on the server component are visible in the terminal and in the browser cons
 
 ## Project fils and folder
 
-https://nextjs.org/docs/app/getting-started/project-structure
+<https://nextjs.org/docs/app/getting-started/project-structure>
 
 ---
 
@@ -24,7 +24,7 @@ https://nextjs.org/docs/app/getting-started/project-structure
 
 Use server component all the time until you need user interaction on the component.
 
-https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns#when-to-use-server-and-client-components
+<https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns#when-to-use-server-and-client-components>
 
 ### Server components
 
@@ -81,6 +81,10 @@ Don't need page.tsx files.
 
 Very important
 
+## ActionIcon
+
+ActionIcon is a stylized button component designed to display only an icon, making it ideal for compact action buttons in toolbars, cards, or lists
+
 ## Default
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
@@ -128,7 +132,7 @@ When you create a Next.js project with TypeScript and the App Router without edi
 
 - **Purpose**: Houses all routes and components for your application.
 - **Key Files**:
-  - `layout.tsx`: Defines the global layout of your app (e.g., `, `). The `children` prop dynamically renders the content of specific pages.
+  - `layout.tsx`: Defines the global layout of your app (e.g., `,`). The `children` prop dynamically renders the content of specific pages.
   - `page.tsx`: Represents the homepage (`/`) of your app. This is the default route.
   - `globals.css`: A global CSS file for styling across your application.
 
