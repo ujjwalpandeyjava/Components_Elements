@@ -3,3 +3,4 @@
 
 # Ignore all node_modules directories
 node_modules/
+Next.js-15-Tutorials/private-music-player/ourFiles/*
